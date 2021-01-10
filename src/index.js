@@ -32,12 +32,11 @@ import "./style.css";
       };
     }
 
-    function initializeClock(id, endtime) {
-      var clock = document.getElementById(id);
-      var daysSpan = clock.querySelector(".days");
-      var hoursSpan = clock.querySelector(".hours");
-      var minutesSpan = clock.querySelector(".minutes");
-      var secondsSpan = clock.querySelector(".seconds");
+    function initializeClock(endtime) {
+      var daysSpan = document.querySelector(".days");
+      var hoursSpan = document.querySelector(".hours");
+      var minutesSpan = document.querySelector(".minutes");
+      var secondsSpan = document.querySelector(".seconds");
 
       function updateClock() {
         var t = getTimeRemaining(endtime);
@@ -57,7 +56,7 @@ import "./style.css";
     }
 
     var deadline = Date.parse("April 30, 2021");
-    initializeClock("clockdiv", deadline);
+    initializeClock(deadline);
   };
 
   init();
