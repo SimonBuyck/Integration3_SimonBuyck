@@ -19,7 +19,6 @@ html {
 body {
   font-size: 2rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: calc((var(--margin) * 2) + 2vw); /*reduced calc test*/
   background-color: var(--backgroundColor);
   color: var(--textColor);
 }
@@ -58,6 +57,43 @@ footer {
   height: 7rem;
 }
 
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 96rem;
+  margin: auto;
+
+}
+
+.logo--mobile__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.navigation {
+  background-color: blue;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation--visible {
+  display: flex;
+}
+
+.nav__item {
+  padding: 1rem;
+}
+
 .hide {
   display: none;
 }
@@ -66,5 +102,22 @@ footer {
 
   h1 {
     font-size: 6vw;
+  }
+
+  .navigation {
+    background-color: none;
+    display: flex;
+    position: relative;
+    flex-flow: row;
+    align-items: unset;
+    width: 45rem;
+  }
+
+  .logo__mobile__nav {
+    position: relative;
+  }
+
+  .hamburger {
+    display: none;
   }
 }

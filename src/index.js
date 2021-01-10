@@ -1,6 +1,19 @@
-import './style.css';
+import "./style.css";
 
-console.log(`Hey, ik ben een JS file`);
-const arr = [1, 2, 3];
-const ES6Stuff = () => console.log(`Ik kan ES6 stuff aan`, ...arr);
-ES6Stuff();
+{
+  const init = () => {
+    document
+      .getElementById("hamburger__nav")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        let navigation = document.getElementById("navigation");
+        if (navigation.classList.contains("navigation--visible")) {
+          navigation.classList.remove("navigation--visible");
+        } else {
+          navigation.classList.add("navigation--visible");
+        }
+      });
+  };
+
+  init();
+}
