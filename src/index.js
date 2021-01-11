@@ -1,5 +1,7 @@
 import "./style.css";
 
+import "./js/gsap";
+
 {
   const init = () => {
     document
