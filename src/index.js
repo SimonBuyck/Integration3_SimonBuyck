@@ -1,6 +1,7 @@
 import "./style.css";
 
 import "./js/gsap";
+import "./js/KNN"
 
 {
   const init = () => {
