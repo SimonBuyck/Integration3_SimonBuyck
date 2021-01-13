@@ -1,7 +1,7 @@
 import "./style.css";
 
 import "./js/gsap";
-import "./js/KNN"
+import "./js/KNN";
 
 {
   const init = () => {
@@ -16,11 +16,18 @@ import "./js/KNN"
           navigation.classList.add("navigation--visible");
         }
       });
-      startTimer();
+    startTimer();
+
+    let scrEl = document.getElementById("scr-el");
+    scrEl.addEventListener("scroll", (event) => {
+      let scrolled =
+        (scrEl.scrollLeft / (scrEl.scrollWidth - scrEl.clientWidth)) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    });
   };
 
   const startTimer = () => {
-        function getTimeRemaining(endtime) {
+    function getTimeRemaining(endtime) {
       var t = endtime - new Date().getTime();
       var seconds = Math.floor((t / 1000) % 60);
       var minutes = Math.floor((t / 1000 / 60) % 60);
