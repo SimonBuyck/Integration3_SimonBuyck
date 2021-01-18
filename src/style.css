@@ -1,6 +1,6 @@
-@import "./css/reset.css";
-@import "./css/vars.css";
-@import "./css/header.css";
+@import './css/reset.css';
+@import './css/vars.css';
+@import './css/header.css';
 
 html {
   box-sizing: border-box;
@@ -103,17 +103,17 @@ footer {
   justify-content: center;
 }
 
-/*scroll css*/
+/*horizontal scroll css*/
 
-.imgCont {
-  display: flex;
-  width: 100%;
+.tutorial__content {
+  display: grid;
+  grid-auto-flow: column;
   background: black;
   overflow-x: scroll;
   position: relative;
 }
 
-.imgCont img {
+.tutorial__content img {
   width: auto;
   max-width: none;
 }
@@ -133,7 +133,7 @@ footer {
 .item {
   width: 250px;
 }
-/*scroll css end*/
+/* horizontal scroll css end*/
 
 .horizontal-scroll-wrapper {
   width: 100px;
