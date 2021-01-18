@@ -1,6 +1,15 @@
 :root {
-  --backgroundColor: #eaeae9;
-  --textColor: #463636;
-  --anotherColor: #bada55;
-  --margin: 2rem;
+  --primaryWhite: white;
+  --primaryBlack: #080708;
+  --accentRed: #ed1d23;
+  --accentYellow: #fdca40;
+  --accentBlue: #00aeef;
+  --accentLightBlue: #d3effc;
+  --accentGrey: #e6e8e6;
+  --marginXS: .4rem;
+  --marginS: .8rem;
+  --marginM: 1.6rem;
+  --marginL: 3.2rem;
+  --marginXL: 6.4rem;
+
 }

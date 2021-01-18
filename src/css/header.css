@@ -15,3 +15,32 @@ h1 {
     width: 40vw;
   }
 }
+
+.header {
+  background-color: var(--accentRed);
+  height: 5rem;
+}
+
+.header__wrapper {
+  padding: 2rem;
+  margin: auto;
+  max-width: 96rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  font-weight: bold;
+
+  & p:not(:last-child) {
+    margin-right: var(--marginM);
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--primaryWhite);
+}
