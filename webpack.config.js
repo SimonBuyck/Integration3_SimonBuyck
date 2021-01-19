@@ -1,18 +1,19 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 
-module.exports = (env, {mode}) => {
+module.exports = (env, { mode }) => {
   console.log(mode);
   return {
     output: {
-      filename: '[name].[hash].js'
+      filename: "script.js",
     },
     devServer: {
       overlay: true,
-      hot: true
+      hot: true,
+      disableHostCheck: true,
     },
     module: {
       rules: [
@@ -20,63 +21,78 @@ module.exports = (env, {mode}) => {
           test: /\.js$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader'
-          }
+            loader: "babel-loader",
+          },
         },
         {
           test: /\.html$/,
           use: [
             {
-              loader: 'html-srcsets-loader',
+              loader: "html-srcsets-loader",
               options: {
-                attrs: [':src', ':srcset']
-              }
-            }
-          ]
+                attrs: [":src", ":srcset"],
+              },
+            },
+          ],
         },
         {
           test: /\.(jpe?g|png|svg|webp)$/,
           use: {
-            loader: 'url-loader',
+            loader: "url-loader",
             options: {
               limit: 1000,
-              context: './src',
-              name: '[path][name].[ext]'
-            }
-          }
+              context: "./src",
+              name: "[path][name].[ext]",
+            },
+          },
         },
         {
           test: /\.css$/,
           use: [
-            mode === 'production'
+            mode === "production"
               ? MiniCssExtractPlugin.loader
-              : 'style-loader',
-            'css-loader',
-            'resolve-url-loader',
+              : "style-loader",
+            "css-loader",
+            "resolve-url-loader",
             {
-              loader: 'postcss-loader',
+              loader: "postcss-loader",
               options: {
                 sourceMap: true,
                 plugins: [
-                  require('postcss-import'),
-                  postcssPresetEnv({stage: 0})
-                ]
-              }
-            }
-          ]
-        }
-      ]
+                  require("postcss-import"),
+                  postcssPresetEnv({ stage: 0 }),
+                ],
+              },
+            },
+          ],
+        },
+        {
+          type: "javascript/auto",
+          test: /\.json$/,
+          include: /(lottie)/,
+          loader: "lottie-web-webpack-loader",
+          options: {
+            assets: {
+              scale: 0.5, // proportional resizing multiplier
+            },
+          },
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          use: ["file-loader"],
+        },
+      ],
     },
     plugins: [
       new HtmlWebPackPlugin({
-        template: './src/index.html',
-        filename: './index.html'
+        template: "./src/index.html",
+        filename: "./index.html",
       }),
       new MiniCssExtractPlugin({
-        filename: 'style.[contenthash].css'
+        filename: "style.css",
       }),
       new OptimizeCSSAssetsPlugin(),
-      new webpack.HotModuleReplacementPlugin()
-    ]
+      new webpack.HotModuleReplacementPlugin(),
+    ],
   };
 };

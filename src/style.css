@@ -2,19 +2,29 @@
 @import './css/vars.css';
 @import './css/header.css';
 @import './css/footer.css';
+@import './css/home.css';
 
 @font-face {
   font-family: Babycakes;
   src:
-    url(/fonts/OpenSans-Regular-webfont.woff2) format('woff2'),
-    url(/fonts/OpenSans-Regular-webfont.woff) format('woff');
+    url(./assets/fonts/BabyCakes/babycake.woff2) format('woff2'),
+    url(./assets/fonts/BabyCakes/Babycakes.woff) format('woff');
 }
 
 @font-face {
   font-family: Avenir;
   src:
-    url(/fonts/OpenSans-Regular-webfont.woff2) format('woff2'),
-    url(/fonts/OpenSans-Regular-webfont.woff) format('woff');
+    url(./assets/fonts/Avenir/AvenirLTStd-Roman.woff2) format('woff2'),
+    url(./assets/fonts/Avenir/AvenirLTStd-Roman.woff) format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Avenir;
+  src:
+    url(./assets/fonts/Avenir/AvenirLTStd-Black.woff2) format('woff2'),
+    url(./assets/fonts/Avenir/AvenirLTStd-Black.woff) format('woff');
+  font-weight: bold;
 }
 
 html {
@@ -32,34 +42,109 @@ html {
 /* stylelint-enable */
 
 body {
-  font-size: 2rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
   background-color: var(--primaryWhite);
   color: var(--primaryBlack);
 }
 
-strong {
-  font-weight: bold;
+.content > article:not(:first-child) {
+  margin-top: var(--marginXL);
+}
 
-  @nest p & {
-    /** enkel om @nest  voorbeeld aan te halen**/
-    color: darkorange;
+.fold__title {
+  font-family: Babycakes, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 41px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: var(--marginS);
+}
+
+.title {
+  font-family: Babycakes, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  text-transform: capitalize;
+  margin-bottom: var(--marginS);
+}
+
+.subtitle {
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+
+.body__special {
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.button {
+  margin-top: var(--marginM);
+  font-weight: bold;
+  width: max-content;
+  padding: var(--marginS) 0;
+
+  & a {
+    transition: .3s;
+    background: var(--accentLightBlue);
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--primaryBlack);
+    padding: var(--marginS) var(--marginM);
+  }
+
+  & a:hover {
+    cursor: pointer;
+    background: var(--accentBlue);
   }
 }
 
-/* img {
-  filter: grayscale(100%);
-  margin: 1rem auto;
-  display: block;
-  width: 50vw;
+.secondairy__button {
+  margin-top: var(--marginM);
+  font-weight: bold;
+  width: max-content;
+  padding: var(--marginS) 0;
 
-  &:hover {
-    filter: none;
+  & .button__link {
+    transition: .3s;
+    text-decoration: none;
+    color: var(--primaryBlack);
+    padding: var(--marginS) var(--marginM);
+    background: rgba(211, 239, 252, .5);
+    /* accent/light-blue */
+
+    border: 2px solid var(--accentLightBlue);
+    box-sizing: border-box;
+    border-radius: 30px;
   }
-} */
+
+  & .button__link:hover {
+    background: #var(--accentLightBlue);
+    border: 2px solid var(--accentBlue);
+  }
+}
 
 .hide {
   display: none;
+}
+
+.align__center {
+  text-align: center;
 }
 
 .countdown {

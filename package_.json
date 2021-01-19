@@ -7,13 +7,13 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "babel-loader": "^8.0.6",
-    "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
     "eslint": "^6.3.0",
-    "eslint-config-devine": "^3.0.0",
-    "file-loader": "^4.2.0",
+    "eslint-config-devine": "^2.1.1",
+    "file-loader": "^6.0.0",
     "html-srcsets-loader": "^0.5.1",
     "html-webpack-plugin": "^3.2.0",
+    "lottie-web-webpack-loader": "0.0.3",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-import": "^12.0.1",
@@ -29,7 +29,11 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --mode development",
-    "prod": "rm -rf dist/ && webpack --mode production"
+    "prod": "yarn clean && yarn copydist && webpack --mode production",
+    "copydist": "rsync -a --exclude=*.css --exclude=*.js ./src/ ./dist",
+    "clean": "rm -rf ./dist",
+    "mamp-dev": "./node_modules/.bin/mamp switch \"$(pwd)/src\"",
+    "mamp-prod": "./node_modules/.bin/mamp switch \"$(pwd)/dist\""
   },
   "browserslist": [
     "last 2 versions",
@@ -37,6 +41,7 @@
     "not dead"
   ],
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "gsap": "^3.6.0",
     "ml5": "^0.6.0"
   }
