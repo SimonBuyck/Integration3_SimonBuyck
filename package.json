@@ -37,6 +37,7 @@
     "not dead"
   ],
   "dependencies": {
+    "@dotlottie/player-component": "^0.1.2",
     "gsap": "^3.6.0",
     "ml5": "^0.6.0"
   }

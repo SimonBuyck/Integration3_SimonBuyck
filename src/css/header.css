@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .nav {
@@ -35,4 +36,28 @@
 .nav .nav__item:hover {
   transition: .3s;
   opacity: 1;
+}
+
+.header__title {
+  display: none;
+  font-weight: bold;
+}
+
+.header__title__link {
+  text-decoration: none;
+  color: var(--primaryWhite);
+}
+
+@media screen and (width >= 600px) {
+
+  .header__title {
+    display: block;
+  }
+
+  .header__wrapper {
+
+    & img {
+      display: none;
+    }
+  }
 }
