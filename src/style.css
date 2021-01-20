@@ -3,29 +3,7 @@
 @import './css/header.css';
 @import './css/footer.css';
 @import './css/home.css';
-
-@font-face {
-  font-family: Babycakes;
-  src:
-    url(./assets/fonts/BabyCakes/babycake.woff2) format('woff2'),
-    url(./assets/fonts/BabyCakes/Babycakes.woff) format('woff');
-}
-
-@font-face {
-  font-family: Avenir;
-  src:
-    url(./assets/fonts/Avenir/AvenirLTStd-Roman.woff2) format('woff2'),
-    url(./assets/fonts/Avenir/AvenirLTStd-Roman.woff) format('woff');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: Avenir;
-  src:
-    url(./assets/fonts/Avenir/AvenirLTStd-Black.woff2) format('woff2'),
-    url(./assets/fonts/Avenir/AvenirLTStd-Black.woff) format('woff');
-  font-weight: bold;
-}
+@import './assets/fonts.css';
 
 html {
   box-sizing: border-box;
@@ -145,12 +123,6 @@ body {
 
 .align__center {
   text-align: center;
-}
-
-.countdown {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /*horizontal scroll css*/

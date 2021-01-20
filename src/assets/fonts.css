@@ -1,0 +1,23 @@
+
+@font-face {
+  font-family: Babycakes;
+  src:
+    url(./fonts/Barriecito/Barriecito-Regular.woff2) format('woff2'),
+    url(./fonts/Barriecito/Barriecito-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: Avenir;
+  src:
+    url(./fonts/Avenir/AvenirLTStd-Roman.woff2) format('woff2'),
+    url(./fonts/Avenir/AvenirLTStd-Roman.woff) format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Avenir;
+  src:
+    url(./fonts/Avenir/AvenirLTStd-Black.woff2) format('woff2'),
+    url(./fonts/Avenir/AvenirLTStd-Black.woff) format('woff');
+  font-weight: bold;
+}

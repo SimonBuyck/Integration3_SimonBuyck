@@ -26,3 +26,13 @@
   text-decoration: none;
   color: var(--primaryWhite);
 }
+
+.nav:hover .nav__item {
+  transition: .3s;
+  opacity: .5;
+}
+
+.nav .nav__item:hover {
+  transition: .3s;
+  opacity: 1;
+}
