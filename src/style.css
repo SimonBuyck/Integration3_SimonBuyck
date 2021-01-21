@@ -24,7 +24,6 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
   background-color: var(--primaryWhite);
   color: var(--primaryBlack);
 }
@@ -119,6 +118,7 @@ body {
 
 .hide {
   display: none;
+  height: 0;
 }
 
 .align__center {
