@@ -1,0 +1,77 @@
+.overzicht {
+  padding: 0 1.5rem;
+  margin: auto;
+  margin-top: var(--marginM);
+}
+
+.tutorial__grid {
+  margin: 0 auto;
+  margin-top: var(--marginL);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-gap: 1.2rem;
+  max-width: 71.6rem;
+}
+
+.tutorial__item__text {
+  height: max-content;
+  margin-top: auto;
+  padding: var(--marginM);
+  width: 16.8rem;
+  background: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(1px);
+
+  & p {
+    margin-bottom: var(--marginM);
+  }
+}
+
+.tutorial_item {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  max-width: 35rem;
+}
+
+.tutorial_item--high {
+  max-height: 33.5rem;
+}
+
+.tutorial_item--wide {
+  max-width: 71.6rem;
+  height: 16.5rem;
+  grid-column: span 2;
+  background-image: url(../assets/img/harnas+slede@3x.png);
+
+  & .tutorial__item__text {
+    margin-left: auto;
+    width: 16.8rem;
+  }
+}
+
+.slede {
+  background-image: url(../assets/img/slede_top_1@3x.png);
+}
+
+.harnas {
+  background-image: url(../assets/img/harnas@3x.png);
+}
+
+.tutorial__link {
+  text-decoration: none;
+  color: var(--primaryBlack);
+}
+
+@media screen and (width >= 700px) {
+
+  .tutorial_item--wide {
+    height: 24.2rem;
+    width: 71.6rem;
+  }
+
+  .tutorial__grid {
+    grid-template-rows: 33.5rem 1fr;
+  }
+}
