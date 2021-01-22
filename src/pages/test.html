@@ -7,8 +7,132 @@
   </head>
 
   <body>
+    
+    <!-- detail -->
+    <main class="detail">
+      <div class="detail__grid">
+        <div class="detail__title">
+          <h2 class="title">slede - pakket</h2>
+          <p class="title price">€ 15,99</p>
+        </div>
+        <img
+          class="detail__img"
+            src="./assets/img/slede_top_1.png"
+            alt="slede"
+            sizes="251px"
+            srcset="
+              ./assets/img/slede_top_1@0.5x.png 126w,
+              ./assets/img/slede_top_1@2x.png   502w,
+              ./assets/img/slede_top_1@3x.png   753w
+            "
+          />
+        <p class="button">
+          <a class="button__link" href="#">Pakket kopen</a>
+        </p>
+        <ul class="detail__contents body">
+          <li class="detail__content__title">Inhoud</li>
+          <li class="detail__content">- hout</li>
+          <li class="detail__content">
+            <ul class="detail__content__hout">
+              <li>- 4x houten platen: 1000mm x 250mm x 18mm</li>
+              <li>- 6x houten platen: 300 mm x 230mm x 18mm</li>
+              <li>- 2x huoten stokken: 1050mm x 36mm x 18mm</li>
+              <li>- 3x houten stokken: 1050mm x 36mm x 18mm</li>
+            </ul>
+          </li>
+          <li class="detail__content">- houtlijm</li>
+          <li class="detail__content">- schuurpapier</li>
+          <li class="detail__content">- 18x deuvels</li>
+          <li class="detail__content">- 3x deuvel pinnen</li>
+          <li class="detail__content">- vijzen</li>
+        </ul>
+      </div>
+    </main>
+    <!-- shop -->
+        <main class="overzicht">
+      <div class="shop__header__grid">
+        <h2 class="title">shop</h2>
+        <p>Laten we eerst kijken of je alles in huis hebt!</p>
+        <p class="secondairy__button">
+          <a class="button__link" href="#">Ik heb alles</a>
+        </p>
+      </div>
+      <ul class="shop__items">
+        <li class="shop__item">
+          <img
+          class="shop__item__img"
+            src="./assets/img/slede_top_1.png"
+            alt="slede"
+            sizes="251px"
+            srcset="
+              ./assets/img/slede_top_1@0.5x.png 126w,
+              ./assets/img/slede_top_1@2x.png   502w,
+              ./assets/img/slede_top_1@3x.png   753w
+            "
+          />
+          <div class="shop__item__text">
+            <div class="shop__item__info">
+              <h3 class="subtitle">slede & harnas</h3>
+              <p class="subtitle">€ 19,98</p>
+            </div>
+            <p>
+              bevat alle benodigd- heden om de tutorial voor de slede te volgen.
+            </p>
+            <p class="button">
+              <a class="button__link" href="#">Pakket kopen</a>
+            </p>
+          </div>
+        </li>
+        <li class="shop__item shop__item--reverse">
+          <img class="shop__item__img"
+            src="./assets/img/harnas.png"
+            alt="harnas"
+            sizes="302px"
+            srcset="
+              ./assets/img/harnas@0.5x.png 151w,
+              ./assets/img/harnas@2x.png 603w,
+              ./assets/img/harnas@3x.png 904w
+            "
+          />
+          <div class="shop__item__text">
+            <div class="shop__item__info">
+              <h3 class="subtitle">slede & harnas</h3>
+              <p class="subtitle">€ 19,98</p>
+            </div>
+            <p>
+              bevat alle benodigd- heden om de tutorial voor de slede te volgen.
+            </p>
+            <p class="button">
+              <a class="button__link" href="#">Pakket kopen</a>
+            </p>
+          </div>
+        </li>
+        <li class="shop__item">
+          <img class="shop__item--rotated shop__item__img"
+            src="./assets/img/harnas+slede.png"
+            alt="harnas + slede"
+            sizes="841px"
+            srcset="./assets/img/harnas+slede@0.5x.png 420w,
+              ./assets/img/harnas+slede@2x.png 1681w,
+              ./assets/img/harnas+slede@3x.png 2521w"
+          />
+          <div class="shop__item__text">
+            <div class="shop__item__info">
+              <h3 class="subtitle">slede & harnas</h3>
+              <p class="subtitle">€ 19,98</p>
+            </div>
+            <p>
+              bevat alle benodigd- heden om de tutorial voor de slede te volgen.
+            </p>
+            <p class="button">
+              <a class="button__link" href="#">Pakket kopen</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </main>
     <!-- overzicht page -->
-    <main class="overzicht">
+        <main class="overzicht">
       <h2 class="title">kies je tutorial(s)</h2>
       <p>Kies een van de volgende tutorials en breng maker faire naar jou!</p>
       <div class="overzicht__grid">
@@ -27,7 +151,7 @@
             </a>
           </div>
         </div>
-        <div class="overzicht_item overzicht_item--high harnas">
+        <div class="overzicht__item overzicht_item--high harnas">
           <div class="overzicht__item__text">
             <h3 class="subtitle">harnas</h3>
             <p>een leren harnas voor je huisdier(en)</p>
@@ -42,7 +166,7 @@
             </a>
           </div>
         </div>
-        <div class="overzicht_item overzicht_item--wide">
+        <div class="overzicht__item overzicht_item--wide">
           <div class="overzicht__item__text">
             <h3 class="subtitle">slede & harnas</h3>
             <p>een leren harnas voor je huisdier(en)</p>

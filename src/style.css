@@ -127,6 +127,11 @@ footer {
   height: 0;
 }
 
+.no__style {
+  border: none;
+  background-color: var(--primaryWhite);
+}
+
 /*horizontal scroll css*/
 
 .tutorial__content {

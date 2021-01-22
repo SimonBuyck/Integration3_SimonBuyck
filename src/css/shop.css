@@ -56,6 +56,114 @@
   }
 }
 
+/* detail pagina */
+
+.detail {
+  background: linear-gradient(90deg, var(--primaryWhite) 49.99%, var(--accentLightBlue) 50%);
+}
+
+.detail__grid {
+  display: grid;
+  margin: var(--marginL) auto;
+  width: max-content;
+}
+
+.detail__title {
+  display: flex;
+  justify-content: space-between;
+  width: 34.5rem;
+}
+
+.detail__img {
+  width: 34.5rem;
+  height: 25rem;
+  object-fit: contain;
+}
+
+.detail__contents {
+  margin-top: var(--marginL);
+  font-style: normal;
+  font-size: 1.4rem;
+}
+
+.detail__content__title {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: capitalize;
+  margin-bottom: var(--marginXS);
+}
+
+.detail__content__hout {
+  margin-left: var(--marginM);
+}
+
+/* bestelling */
+
+.order__grid {
+  display: grid;
+}
+
+.order__adres, .order__payment, .order__overview {
+  margin-top: var(--marginL);
+  display: flex;
+  flex-flow: column;
+}
+
+.bancontact__info {
+  display: none;
+  flex-flow: column;
+}
+
+label, .gender > p {
+  margin-top: var(--marginM);
+  display: flex;
+  flex-flow: column;
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid var(--accentBlue);
+  border-radius: 2.2rem;
+  width: 34.5rem;
+  height: 3rem;
+}
+
+input::placeholder {
+  padding: .5rem 1.6rem;
+}
+
+.gender {
+  width: 34.5rem;
+}
+
+.gender__inputs {
+  display: flex;
+}
+
+.gender__inputs > label, .order__payment > label {
+  font-weight: normal;
+  flex-flow: row;
+  align-items: center;
+
+  & input {
+    color: var(--accentBlue);
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.error {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: var(--accentRed);
+  margin-top: var(--marginXS);
+}
+
+.bancontact:checked ~ .bancontact__info {
+  display: flex;
+}
+
 @media screen and (width >= 500px) {
 
   .shop__header__grid {
@@ -96,5 +204,51 @@
     & .shop__item__text {
       margin-right: -2rem;
     }
+  }
+}
+
+@media screen and (width >= 960px) {
+
+  .detail__grid {
+    max-width: 93rem;
+    grid-template-columns: 30.5rem 30rem 27.5rem;
+    grid-template-rows: 10rem 2.9rem 3.5rem 20.2rem max-content 6.6rem;
+    grid-gap: 2.5rem;
+
+    & .button {
+      margin-top: 0;
+      align-self: center;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+  }
+
+  .detail__title {
+    align-self: center;
+    width: 30.5rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .detail__img {
+    margin: auto;
+    width: 30rem;
+    height: 62rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 7;
+  }
+
+  .detail__contents {
+    margin-top: 0;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
   }
 }
