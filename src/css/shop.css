@@ -100,6 +100,11 @@
 
 /* bestelling */
 
+.order {
+  margin: auto;
+  margin-top: var(--marginL);
+}
+
 .order__grid {
   display: grid;
 }
@@ -110,11 +115,6 @@
   flex-flow: column;
 }
 
-.bancontact__info {
-  display: none;
-  flex-flow: column;
-}
-
 label, .gender > p {
   margin-top: var(--marginM);
   display: flex;
@@ -122,15 +122,22 @@ label, .gender > p {
   font-weight: 600;
 }
 
-input {
+input, .input {
   border: 1px solid var(--accentBlue);
   border-radius: 2.2rem;
   width: 34.5rem;
   height: 3rem;
 }
 
+
+
 input::placeholder {
   padding: .5rem 1.6rem;
+  opacity: .8;
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .gender {
@@ -139,6 +146,46 @@ input::placeholder {
 
 .gender__inputs {
   display: flex;
+  justify-content: space-between;
+}
+
+.radioBtn__grid {
+  margin-top: var(--marginS);
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-template-rows: auto;
+
+  & .radio__input {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  & label {
+    margin: 0;
+    margin-left: var(--marginM);
+    font-weight: normal;
+    align-self: center;
+  }
+}
+
+.bancontact__info {
+  display: none;
+  flex-flow: column;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  & label {
+    margin-top: var(--marginM);
+    margin-left: 0;
+    font-weight: normal;
+  }
+
+  & input {
+    width: 34.5rem;
+    height: 3rem;
+  }
 }
 
 .gender__inputs > label, .order__payment > label {
@@ -157,11 +204,50 @@ input::placeholder {
   font-size: 1.4rem;
   font-weight: normal;
   color: var(--accentRed);
-  margin-top: var(--marginXS);
+  margin: var(--marginXS) 0;
 }
 
 .bancontact:checked ~ .bancontact__info {
+  display: grid;
+}
+
+.order__item {
   display: flex;
+  justify-content: space-between;
+}
+
+.order__item__price {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: var(--marginM);
+
+  & button {
+    grid-column-start: 2;
+    margin-top: var(--marginS);
+    justify-self: end;
+  }
+}
+
+.order__price {
+  justify-self: end;
+}
+
+.order__item__total {
+  margin-top: var(--marginM);
+  padding-top: var(--marginM);
+  border-top: 1px solid var(--primaryBlack);
+}
+
+.order__submit {
+  margin-left: auto;
+}
+
+.input {
+  border: 1px solid var(--accentBlue);
+  border-radius: 2.2rem;
+  width: 34.5rem;
+  height: 3rem;
 }
 
 @media screen and (width >= 500px) {
@@ -204,6 +290,25 @@ input::placeholder {
     & .shop__item__text {
       margin-right: -2rem;
     }
+  }
+
+  .order__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.4rem;
+
+    & .order__submit {
+      grid-column-start: 1;
+      margin-top: 0;
+    }
+  }
+
+  .order__adres, .order__overview {
+    margin-top: 0;
+  }
+
+  .order__overview {
+    grid-column-start: 2;
+    grid-row-start: 1;
   }
 }
 
