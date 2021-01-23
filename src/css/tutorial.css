@@ -1,0 +1,408 @@
+.portait {
+  display: none;
+  background-color: black;
+}
+
+.tutorial ~ footer {
+  display: none;
+}
+
+.tutorial {
+  height: 100vh;
+}
+
+.header__absolute {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+
+.webcam {
+  position: absolute;
+  z-index: 10;
+  top: 5rem;
+  right: 0;
+  width: 9rem;
+  height: 6.4rem;
+
+  & canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.landscape {
+  height: 100%;
+}
+
+/*horizontal scroll css*/
+
+.tutorial__content {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.progress-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accentLightBlue);
+}
+
+.progress-bar {
+  height: 5px;
+  background: var(--accentBlue);
+  width: 0%;
+}
+
+.tutorial__items {
+  position: relative;
+}
+
+.tutorial__maten {
+  background-image: url(../assets/img/plooimeter@3x.png);
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: flex;
+  grid-template-columns: max-content;
+  position: relative;
+  margin-top: 5rem;
+  margin-left: 15rem;
+
+  & p {
+    width: 23rem;
+    grid-column-start: 1;
+  }
+}
+
+.tutorial__maten__intro {
+  margin-top: 5rem;
+  margin-bottom: auto;
+}
+
+.tutorial__maten__img--ondersteuning {
+  width: 21rem;
+}
+
+.tutorial__maten__img--poten {
+  width: 31.6rem;
+  align-self: center;
+  margin-left: 10rem;
+}
+
+.tutorial__maten__img--stokken {
+  align-self: center;
+  justify-self: center;
+  margin-left: 5rem;
+  margin-bottom: 1.5rem;
+  margin-top: auto;
+}
+
+.tutorial__maten__img--background {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  height: 115%;
+}
+
+.tutorial__zagen {
+  position: relative;
+  margin-top: -5rem;
+  width: 65.6rem;
+}
+
+.tutorial__zagen__zaag {
+  position: absolute;
+  top: -8rem;
+  left: 0;
+}
+
+.tutorial__zagen__text {
+  position: absolute;
+  top: 25.5rem;
+  left: 28.5rem;
+  text-align: center;
+
+  & p:not(:first-child) {
+    font-weight: bold;
+    margin-top: var(--marginXS);
+  }
+}
+
+.tutorial__lijmen {
+  position: relative;
+  width: 53rem;
+  display: flex;
+  margin-left: 10rem;
+}
+
+.wood {
+  position: absolute;
+  width: 53rem;
+  height: 59rem;
+  background-color: var(--accentYellow);
+  border-radius: 10px;
+}
+
+.wood--top {
+  top: -45rem;
+
+}
+
+.wood--bottom {
+  bottom: -45rem;
+}
+
+.tutorial__lijmen__text {
+  margin: auto;
+}
+
+.tutorial__wait {
+  margin-left: 10rem;
+  width: 100vw;
+  display: flex;
+
+  /* verwijderen */
+
+  & img {
+    margin-top: auto;
+    width: 100%;
+  }
+}
+
+.tutorial__deuvel, .tutorial__deuvelpin, .tutorial__stokken, .tutorial__vernis {
+  padding-top: 5rem;
+  margin: auto;
+  margin-left: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.tutorial__deuvel__img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: contain;
+}
+
+.tutorial__deuvel__text {
+  width: 24rem;
+  margin-top: 1.6rem;
+  text-align: center;
+}
+
+.tutorial__boren {
+  position: relative;
+  display: flex;
+  margin-left: 10rem;
+}
+
+.tutorial__boren__drill {
+  position: absolute;
+  top: -21.5rem;
+}
+
+.tutorial__boren__wood {
+  width: 80vw;
+  height: 12rem;
+  background-color: var(--accentYellow);
+  margin-top: auto;
+
+  border-radius: 10px 10px 0 0;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.tutorial__boren__deuvel__hole {
+  width: 6rem;
+  height: 8rem;
+}
+
+.tutorial__assembleren {
+  margin-left: 10rem;
+  position: relative;
+}
+
+.tutorial__assembleren__text {
+  text-align: center;
+  margin-top: 6rem;
+  width: 34rem;
+  position: absolute;
+  top: 1rem;
+}
+
+.tutorial__stokken {
+  width: 20rem;
+  text-align: center;
+}
+
+.tutorial__stokken__img {
+  height: 18rem;
+  margin: auto;
+  margin-top: 1.6rem;
+}
+
+.tutorial__vernis {
+  flex-flow: column-reverse;
+}
+
+.tutorial__paint {
+  margin-top: auto;
+  margin-bottom: -.5rem;
+  margin-left: 10rem;
+  padding-right: 10rem;
+  text-align: center;
+
+  & .button {
+    margin: auto;
+    margin-top: 1.6rem;
+  }
+}
+
+.tutorial__paint__img {
+  width: 30rem;
+  height: 18rem;
+  object-fit: contain;
+}
+
+.tutorial__paint__paint {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.6rem;
+
+  & img {
+    width: 6.5rem;
+  }
+}
+
+@media (orientation: portrait) {
+
+  .portait {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    z-index: 100;
+  }
+
+  .landscape {
+    display: none;
+  }
+}
+
+@media screen and (height >= 400px) {
+
+  .tutorial__maten__img--ondersteuning {
+    width: 30rem;
+    height: 16.8rem;
+    margin-top: auto;
+  }
+
+  .tutorial__maten__img--stokken {
+    width: 30rem;
+    height: 13.6rem;
+    margin-left: 1rem;
+  }
+
+  .tutorial__maten {
+
+    & p {
+      width: 30rem;
+    }
+  }
+}
+
+@media screen and (height >= 500px) {
+
+  .tutorial__maten__img--ondersteuning {
+    width: 30rem;
+    height: 16.8rem;
+    margin-top: auto;
+  }
+
+  .tutorial__maten__img--stokken {
+    width: 30rem;
+    height: 13.6rem;
+    margin-left: 1rem;
+  }
+
+  .tutorial__maten {
+
+    & p {
+      width: 30rem;
+    }
+  }
+}
+
+@media screen and (height >= 768px) {
+
+  .tutorial__maten__img--ondersteuning {
+    width: 46.5rem;
+    height: 26rem;
+    margin-top: auto;
+    margin-left: 7.4rem;
+  }
+
+  .tutorial__maten {
+
+    & p {
+      margin-top: .4rem;
+      margin-left: 7.4rem;
+      width: 46.5rem;
+    }
+  }
+
+  .tutorial__maten__img--stokken {
+    width: 52.7rem;
+    height: 24rem;
+    margin-left: 12rem;
+  }
+
+  .tutorial__maten__img--poten {
+    width: 62.5rem;
+    height: 17.5rem;
+    margin-left: 21rem;
+  }
+}
+
+@media screen and (height >= 768px) {
+
+  .tutorial__maten__img--ondersteuning {
+    width: 46.5rem;
+    height: 26rem;
+    margin-top: auto;
+    margin-left: 7.4rem;
+  }
+
+  .tutorial__maten {
+
+    & p {
+      margin-top: .4rem;
+      margin-left: 7.4rem;
+      width: 46.5rem;
+    }
+  }
+
+  .tutorial__maten__img--stokken {
+    width: 52.7rem;
+    height: 24rem;
+    margin-left: 12rem;
+  }
+
+  .tutorial__maten__img--poten {
+    width: 62.5rem;
+    height: 17.5rem;
+    margin-left: 21rem;
+  }
+}

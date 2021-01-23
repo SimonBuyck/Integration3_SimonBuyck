@@ -2,6 +2,7 @@
   background-color: var(--accentRed);
   height: 5rem;
   width: 100%;
+  align-self: flex-start;
 }
 
 .header__wrapper {

@@ -5,11 +5,14 @@
 @import './css/home.css';
 @import './css/overzicht.css';
 @import './css/shop.css';
+@import './css/navigation.css';
+@import './css/tutorial.css';
 @import './assets/fonts.css';
 
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  height: 100%;
 }
 
 /* stylelint-disable */
@@ -130,49 +133,6 @@ footer {
 .no__style {
   border: none;
   background-color: var(--primaryWhite);
-}
-
-/*horizontal scroll css*/
-
-.tutorial__content {
-  display: grid;
-  grid-auto-flow: column;
-  background: black;
-  overflow-x: scroll;
-  position: relative;
-}
-
-.tutorial__content img {
-  width: auto;
-  max-width: none;
-}
-
-.progress-container {
-  width: 100%;
-  height: 5px;
-  background: var(--accentLightBlue);
-}
-
-.progress-bar {
-  height: 5px;
-  background: var(--accentBlue);
-  width: 0%;
-}
-
-.item {
-  width: 250px;
-}
-/* horizontal scroll css end*/
-
-@media (orientation: portrait) {
-
-  .nadar {
-    display: none;
-  }
-
-  body {
-    flex-direction: column;
-  }
 }
 
 /* @media screen and (width >= 500px) {
