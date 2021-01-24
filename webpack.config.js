@@ -20,7 +20,7 @@ module.exports = (env, { mode }) => {
     module: {
       rules: [
         {
-          test: /\.(woff(2)?|jpe?g|png|svg|webp)$/,
+          test: /\.(jpe?g|png|svg|webp)$/,
           use: {
             loader: 'file-loader',
             options: {
@@ -30,10 +30,15 @@ module.exports = (env, { mode }) => {
           },
         },
         {
-          test: /\.(woff(2)?|woff)$/,
-          use: {
-            loader: 'file-loader'
-          },
+          test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]'
+              },
+            },
+          ],
         },
         {
           test: /\.css$/,

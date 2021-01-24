@@ -1,28 +1,30 @@
-import "./style.css";
+import './style.css';
 
-import "./js/gsap";
-import "./js/KNN";
+import './js/gsap';
+import './js/KNN';
+
+import './js/validate';
 
 {
   const init = () => {
     startTimer();
 
-    let scrEl = document.getElementById("scr-el");
-    if(scrEl){
-      scrEl.addEventListener("scroll", (event) => {
-        let scrolled =
+    const scrEl = document.getElementById('scr-el');
+    if (scrEl) {
+      scrEl.addEventListener('scroll', () => {
+        const scrolled =
           (scrEl.scrollLeft / (scrEl.scrollWidth - scrEl.clientWidth)) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
+        document.getElementById('myBar').style.width = scrolled + '%';
       });
     }
   };
 
   const startTimer = () => {
     function getTimeRemaining(endtime) {
-      var t = endtime - new Date().getTime();
-      var minutes = Math.floor((t / 1000 / 60) % 60);
-      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      const t = endtime - new Date().getTime();
+      const minutes = Math.floor((t / 1000 / 60) % 60);
+      const hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(t / (1000 * 60 * 60 * 24));
       return {
         total: t,
         days: days,
@@ -32,17 +34,17 @@ import "./js/KNN";
     }
 
     function initializeClock(endtime) {
-      var daysSpan = document.querySelector(".days");
-      var hoursSpan = document.querySelector(".hours");
-      var minutesSpan = document.querySelector(".minutes");
+      const daysSpan = document.querySelector('.days');
+      const hoursSpan = document.querySelector('.hours');
+      const minutesSpan = document.querySelector('.minutes');
 
-      if (daysSpan || hoursSpan || minutesSpan){
-        function updateClock() {
-          var t = getTimeRemaining(endtime);
+      if (daysSpan || hoursSpan || minutesSpan) {
+        const updateClock = () => {
+          const t = getTimeRemaining(endtime);
 
           daysSpan.innerHTML = t.days;
-          hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
-          minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+          hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+          minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
 
           if (t.total <= 0) {
             clearInterval(timeinterval);
@@ -50,11 +52,11 @@ import "./js/KNN";
         }
 
         updateClock();
-        var timeinterval = setInterval(updateClock, 1000);
+        const timeinterval = setInterval(updateClock, 1000);
       }
     }
 
-    var deadline = Date.parse("April 30, 2021");
+    const deadline = Date.parse('April 30, 2021');
     initializeClock(deadline);
   };
 

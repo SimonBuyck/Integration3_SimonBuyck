@@ -14,17 +14,41 @@ class ShopDAO extends DAO
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
-  public function insertQuote($data)
+  public function selectOrderById($id)
+  {
+    $sql = "SELECT * FROM `quotes` WHERE `id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
+  public function insertOrder($data)
   {
     $errors = $this->validate($data);
     if (empty($errors)) {
-      $sql = "INSERT INTO `quotes` (`episode_id`,`quote`,`author`) VALUES(:episode_id,:quote,:author)";
+      $sql = "INSERT INTO `orders` (`city`,`street`,`house_number`,`extra_adresrule`,`gender`,`firstname`,`lastname`, `pay_method`,`card_number`, `expiration_date`,`name_on_card`,`order_id`) VALUES (:city, :street,:house_number,:extra_adresrule,:gender,:firstname,:lastname, :pay_method,:card_number, :expiration_date,:name_on_card,:order_id)";
       $stmt = $this->pdo->prepare($sql);
-      $stmt->bindValue(':episode_id', $data['episode_id']);
-      $stmt->bindValue(':quote', $data['quote']);
-      $stmt->bindValue(':author', $data['author']);
+      $stmt->bindValue(':city', $data['city']);
+      $stmt->bindValue(':street', $data['street']);
+      $stmt->bindValue(':house_number', $data['house_number']);
+      $stmt->bindValue(':extra_adresrule', $data['extra_adresrule']);
+      $stmt->bindValue(':gender', $data['gender']);
+      $stmt->bindValue(':firstname', $data['firstname']);
+      $stmt->bindValue(':lastname', $data['lastname']);
+      $stmt->bindValue(':pay_method', $data['pay_method']);
+      if($data['pay_method'] == 'bancontact'){
+        $stmt->bindValue(':card_number', $data['card_number']);
+        $stmt->bindValue(':expiration_date', $data['expiration_date']);
+        $stmt->bindValue(':name_on_card', $data['name_on_card']);
+      } else {
+        $stmt->bindValue(':card_number', '-');
+        $stmt->bindValue(':expiration_date', '-');
+        $stmt->bindValue(':name_on_card', '-');
+      }
+      $stmt->bindValue(':order_id', $data['order_id']);
       if ($stmt->execute()) {
-        return $this->selectQuoteById($this->pdo->lastInsertId());
+        return $this->selectOrderById($this->pdo->lastInsertId());
       }
     }
     return false;
@@ -33,11 +57,26 @@ class ShopDAO extends DAO
   public function validate($data)
   {
     $errors = [];
-    if (empty($data['quote'])) {
-      $errors['quote'] = 'Gelieve een quote in te geven';
+    if (empty($data['city'])) {
+      $errors['city'] = 'Gelieve een gemeente in te geven';
     }
-    if (empty($data['author'])) {
-      $errors['author'] = 'Gelieve een auteur in te geven';
+    if (empty($data['street'])) {
+      $errors['street'] = 'Gelieve een straat in te geven';
+    }
+    if (empty($data['house_number'])) {
+      $errors['house_number'] = 'Gelieve een huisnummer in te geven';
+    }
+    if (empty($data['gender'])) {
+      $errors['gender'] = 'Gelieve een aanhef te kiezen';
+    }
+    if (empty($data['firstname'])) {
+      $errors['firstname'] = 'Gelieve een voornaam in te geven';
+    }
+    if (empty($data['lastname'])) {
+      $errors['lastname'] = 'Gelieve een achternaam in te geven';
+    }
+    if (empty($data['pay_method'])) {
+      $errors['pay_method'] = 'Gelieve een betaalmethode te kiezen';
     }
     return $errors;
   }
