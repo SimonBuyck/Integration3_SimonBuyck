@@ -3,7 +3,7 @@
     <h2 class="title">shop</h2>
     <p>Laten we eerst kijken of je alles in huis hebt!</p>
     <p class="secondairy__button">
-      <a class="button__link" href="#">Ik heb alles</a>
+      <a class="button__link" href="index.php?page=navigation&id=<?php echo $_GET['id'] ?>">Ik heb alles</a>
     </p>
   </div>
   <ul class="shop__items">

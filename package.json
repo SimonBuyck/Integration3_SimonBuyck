@@ -36,6 +36,7 @@
   ],
   "dependencies": {
     "gsap": "^3.6.0",
+    "lottie-web": "^5.7.6",
     "ml5": "^0.6.0"
   }
 }

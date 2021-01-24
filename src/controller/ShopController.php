@@ -85,31 +85,31 @@ class ShopController extends Controller
       exit();
     }
 
-    // in het geval van een POST request uit JavaScript
-    $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
-    if ($contentType === "application/json") {
-      // data ophalen via php://input (is nu éénmaal zo voor formdata)
-      $content = trim(file_get_contents("php://input"));
-      $data = json_decode($content, true); // JSON omzetten naar assoc array
+    // // in het geval van een POST request uit JavaScript
+    // $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+    // if ($contentType === "application/json") {
+    //   // data ophalen via php://input (is nu éénmaal zo voor formdata)
+    //   $content = trim(file_get_contents("php://input"));
+    //   $data = json_decode($content, true); // JSON omzetten naar assoc array
 
-      // ter controle van wat je binnen haalt
-      //var_dump($data);
+    //   // ter controle van wat je binnen haalt
+    //   //var_dump($data);
 
-      // toevoegen van een quote in de database en geef een error terug in geval van fout
-      $insertedOrder = $this->shopDAO->insertOrder($data);
-      if (!$insertedOrder) {
-        $errors = $this->shopDAO->validate($data);
-        $errors['error'] = "Er zijn fouten opgetreden";
-        //$this->set('errors',$errors);
-        echo json_encode($errors);
-      } else {
-        // geef alle quotes uit de database terug indien gelukt
-        $item = $this->shopDAO->selectOrderById($data['order_id']);
-        echo json_encode($item);
-      }
-      // stop met PHP uit te voeren, JavaScript mag overnemen
-      exit();
-    }
+    //   // toevoegen van een quote in de database en geef een error terug in geval van fout
+    //   $insertedOrder = $this->shopDAO->insertOrder($data);
+    //   if (!$insertedOrder) {
+    //     $errors = $this->shopDAO->validate($data);
+    //     $errors['error'] = "Er zijn fouten opgetreden";
+    //     //$this->set('errors',$errors);
+    //     echo json_encode($errors);
+    //   } else {
+    //     // geef alle quotes uit de database terug indien gelukt
+    //     $item = $this->shopDAO->selectOrderById($data['order_id']);
+    //     echo json_encode($item);
+    //   }
+    //   // stop met PHP uit te voeren, JavaScript mag overnemen
+    //   exit();
+    // }
 
     if (!empty($_POST['action'])) {
       if ($_POST['action'] == 'insirtOrder') {
@@ -119,7 +119,7 @@ class ShopController extends Controller
           $this->set('errors', $errors);
         } else {
           $_SESSION['info'] = 'Bedankt voor je bestelling';
-          header('Location:index.php?page=shop');
+          header('Location:index.php?page=navigation');
           exit();
         }
       }

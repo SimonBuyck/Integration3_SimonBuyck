@@ -14,15 +14,6 @@ class ShopDAO extends DAO
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
-  public function selectOrderById($id)
-  {
-    $sql = "SELECT * FROM `quotes` WHERE `id` = :id";
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':id', $id);
-    $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_ASSOC);
-  }
-
   public function insertOrder($data)
   {
     $errors = $this->validate($data);
@@ -32,7 +23,11 @@ class ShopDAO extends DAO
       $stmt->bindValue(':city', $data['city']);
       $stmt->bindValue(':street', $data['street']);
       $stmt->bindValue(':house_number', $data['house_number']);
-      $stmt->bindValue(':extra_adresrule', $data['extra_adresrule']);
+      if(!empty($data['extra_adresrule'])){
+        $stmt->bindValue(':extra_adresrule', $data['extra_adresrule']);
+      } else {
+        $stmt->bindValue(':extra_adresrule', '-');
+      }
       $stmt->bindValue(':gender', $data['gender']);
       $stmt->bindValue(':firstname', $data['firstname']);
       $stmt->bindValue(':lastname', $data['lastname']);
@@ -42,14 +37,12 @@ class ShopDAO extends DAO
         $stmt->bindValue(':expiration_date', $data['expiration_date']);
         $stmt->bindValue(':name_on_card', $data['name_on_card']);
       } else {
-        $stmt->bindValue(':card_number', '-');
+        $stmt->bindValue(':card_number', 0);
         $stmt->bindValue(':expiration_date', '-');
         $stmt->bindValue(':name_on_card', '-');
       }
       $stmt->bindValue(':order_id', $data['order_id']);
-      if ($stmt->execute()) {
-        return $this->selectOrderById($this->pdo->lastInsertId());
-      }
+      $stmt->execute();
     }
     return false;
   }
@@ -77,7 +70,18 @@ class ShopDAO extends DAO
     }
     if (empty($data['pay_method'])) {
       $errors['pay_method'] = 'Gelieve een betaalmethode te kiezen';
+    } else if ($data['pay_method'] == 'bancontact') {
+      if (empty($data['card_number'])) {
+        $errors['card_number'] = 'Gelieve een kaartnummer in te geven';
+      }
+      if (empty($data['expiration_date'])) {
+        $errors['expiration_date'] = 'Gelieve een vervaldatum in te geven';
+      }
+      if (empty($data['name_on_card'])) {
+        $errors['name_on_card'] = 'Gelieve een naam in te geven';
+      }
     }
+
     return $errors;
   }
 }

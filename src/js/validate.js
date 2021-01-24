@@ -7,7 +7,7 @@
       const fields = $form.querySelectorAll(`.input`);
       fields.forEach(showValidationInfo);
 
-      //$form.querySelector(`.error`).innerHTML = `Some errors occured`;
+      // $form.querySelector(`.error`).innerHTML = `Some errors occured`;
     } else {
       console.log(`Form is valid => submit form`);
     }

@@ -1,5 +1,5 @@
 <main class="order">
-  <form class="order__grid" action="index.php?page=conform&id=<?php echo $_GET['id']; ?>" method="post">
+  <form class="order__grid" action="index.php?page=confirm&id=<?php echo $_GET['id'] ?>" method="post">
     <input type="text" name="order_id" id="order_id" value=<?php echo $_GET['id'] ?> hidden />
     <input type="hidden" name="action" value="insirtOrder">
     <div class="order__adres">
@@ -7,33 +7,27 @@
       <label for="city">
         Postcode of gemeente<span class="error"><?php if (!empty($errors['city'])) {
                                                   echo $errors['city'];
-                                                } ?></span> </label><input type="text" name="city" id="city" placeholder="somewhere 9999" required />
+                                                } ?></span><input type="text" name="city" id="city" placeholder="somewhere 9999" required /> </label>
       <label for="street"> Straatnaam<span class="error"><?php if (!empty($errors['street'])) {
                                                             echo $errors['street'];
-                                                          } ?></span> </label><input type="text" name="street" id="street" placeholder="somewherestreet" required />
+                                                          } ?></span><input type="text" name="street" id="street" placeholder="somewherestreet" required /></label>
       <label for="house_number">
         Huisnummer<span class="error"><?php if (!empty($errors['house_number'])) {
                                         echo $errors['house_number'];
-                                      } ?></span> </label><input type="text" name="house_number" id="house_number" placeholder="123" required />
+                                      } ?></span><input type="text" name="house_number" id="house_number" placeholder="123" required /></label>
       <label for="extra_adres">
-        Extra adresregel (optioneel)<span class="error"></span> </label><input type="text" name="extra_adres" id="extra_adres" placeholder="4A" />
+        Extra adresregel (optioneel)<span class="error"></span><input type="text" name="extra_adres" id="extra_adres" placeholder="4A" /></label>
       <div class="gender">
         <p>Aanhef <span class="error"><?php if (!empty($errors['gender'])) {
                                         echo $errors['gender'];
                                       } ?></span></p>
         <div class="gender__inputs">
-          <div class="radioBtn__grid">
             <input class="radio__input" type="radio" name="gender" id="female" value="1" required />
             <label for="female"> Mevrouw </label>
-          </div>
-          <div class="radioBtn__grid">
             <input class="radio__input" type="radio" name="gender" id="male" value="2" required />
             <label for="male"> De Heer </label>
-          </div>
-          <div class="radioBtn__grid">
             <input class="radio__input" type="radio" name="gender" id="x" value="3" required />
             <label for="x"> X </label>
-          </div>
         </div>
       </div>
       <label for="firstname"> Voornaam<span class="error"><?php if (!empty($errors['firstname'])) {
@@ -46,20 +40,29 @@
     </div>
     <div class="order__payment">
       <h2 class="title">betaalMethode</h2>
+      <span class="error"><?php if (!empty($errors['lastname'])) {
+                            echo $errors['lastname'];
+                          } ?></span>
       <div class="radioBtn__grid">
         <input class="bancontact radio__input" type="radio" name="pay_method" id="bancontact" value="bancontact" required />
         <label for="bancontact"> bancontact </label>
         <div class="bancontact__info">
           <label for="kaartnummer">
-            Kaartnummer<span class="error"></span>
+            Kaartnummer<span class="error"><?php if (!empty($errors['card_number'])) {
+                                              echo $errors['card_number'];
+                                            } ?></span>
           </label>
           <input type="text" name="kaartnummer" id="kaartnummer" placeholder="1234 1234 1234 1234 1" />
           <label for="vervaldatum">
-            vervaldatum<span class="error"></span>
+            vervaldatum<span class="error"><?php if (!empty($errors['expiration_date'])) {
+                                              echo $errors['expiration_date'];
+                                            } ?></span>
           </label>
           <input type="text" name="vervaldatum" id="vervaldatum" placeholder="12/25" />
           <label for="naam__kaart">
-            Naam op de kaart<span class="error">dit is een error</span>
+            Naam op de kaart<span class="error"><?php if (!empty($errors['name_on_card'])) {
+                                                  echo $errors['name_on_card'];
+                                                } ?></span>
           </label>
           <input type="text" name="naam__kaart" id="naam__kaart" placeholder="johnDoe" />
         </div>

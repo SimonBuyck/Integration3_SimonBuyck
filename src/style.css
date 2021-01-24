@@ -7,7 +7,29 @@
 @import './css/shop.css';
 @import './css/navigation.css';
 @import './css/tutorial.css';
-@import './css/fonts.css';
+
+@font-face {
+  font-family: Barriecito;
+  src:
+    url(./assets/fonts/Barriecito-Regular.woff2) format('woff2'),
+    url(./assets/fonts/Barriecito-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: Avenir;
+  src:
+    url(./assets/fonts/AvenirLTStd-Roman.woff2) format('woff2'),
+    url(./assets/fonts/AvenirLTStd-Roman.woff) format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Avenir;
+  src:
+    url(./assets/fonts/AvenirLTStd-Black.woff2) format('woff2'),
+    url(./assets/fonts/AvenirLTStd-Black.woff) format('woff');
+  font-weight: bold;
+}
 
 html {
   box-sizing: border-box;
