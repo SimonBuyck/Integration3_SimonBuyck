@@ -5,9 +5,11 @@
       e.preventDefault();
 
       const fields = $form.querySelectorAll(`.input`);
+      console.log(fields);
+
       fields.forEach(showValidationInfo);
 
-      // $form.querySelector(`.error`).innerHTML = `Some errors occured`;
+      $form.querySelector(`.error`).innerHTML = `Some errors occured`;
     } else {
       console.log(`Form is valid => submit form`);
     }
@@ -65,6 +67,7 @@
   };
 
   const init = () => {
+    console.log('start validating');
     const $form = document.querySelector(`form`);
     $form.noValidate = true;
     $form.addEventListener(`submit`, handleSubmitForm);

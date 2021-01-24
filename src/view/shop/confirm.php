@@ -7,36 +7,37 @@
       <label for="city">
         Postcode of gemeente<span class="error"><?php if (!empty($errors['city'])) {
                                                   echo $errors['city'];
-                                                } ?></span><input type="text" name="city" id="city" placeholder="somewhere 9999" required /> </label>
+                                                } ?></span><input class="input" type="text" name="city" id="city" placeholder="somewhere 9999" required /> </label>
       <label for="street"> Straatnaam<span class="error"><?php if (!empty($errors['street'])) {
                                                             echo $errors['street'];
-                                                          } ?></span><input type="text" name="street" id="street" placeholder="somewherestreet" required /></label>
+                                                          } ?></span><input class="input" type="text" name="street" id="street" placeholder="somewherestreet" required /></label>
       <label for="house_number">
         Huisnummer<span class="error"><?php if (!empty($errors['house_number'])) {
                                         echo $errors['house_number'];
-                                      } ?></span><input type="text" name="house_number" id="house_number" placeholder="123" required /></label>
+                                      } ?></span><input class="input" type="text" name="house_number" id="house_number" placeholder="123" required /></label>
       <label for="extra_adres">
         Extra adresregel (optioneel)<span class="error"></span><input type="text" name="extra_adres" id="extra_adres" placeholder="4A" /></label>
       <div class="gender">
-        <p>Aanhef <span class="error"><?php if (!empty($errors['gender'])) {
-                                        echo $errors['gender'];
-                                      } ?></span></p>
+        <p>Aanhef </p>
         <div class="gender__inputs">
-            <input class="radio__input" type="radio" name="gender" id="female" value="1" required />
-            <label for="female"> Mevrouw </label>
-            <input class="radio__input" type="radio" name="gender" id="male" value="2" required />
-            <label for="male"> De Heer </label>
-            <input class="radio__input" type="radio" name="gender" id="x" value="3" required />
-            <label for="x"> X </label>
+          <span class="error"><?php if (!empty($errors['gender'])) {
+                                echo $errors['gender'];
+                              } ?></span>
+          <input class="input radio__input" type="radio" name="gender" id="female" value="1" required />
+          <label for="female"> Mevrouw </label>
+          <input class="input radio__input" type="radio" name="gender" id="male" value="2" required />
+          <label for="male"> De Heer </label>
+          <input class="input radio__input" type="radio" name="gender" id="x" value="3" required />
+          <label for="x"> X </label>
         </div>
       </div>
       <label for="firstname"> Voornaam<span class="error"><?php if (!empty($errors['firstname'])) {
                                                             echo $errors['firstname'];
-                                                          } ?></span> </label><input type="text" name="firstname" id="firstname" placeholder="john" required />
+                                                          } ?></span><input class="input" type="text" name="firstname" id="firstname" placeholder="john" required /> </label>
       <label for="lastname"> Achternaam<span class="error"><?php if (!empty($errors['lastname'])) {
                                                               echo $errors['lastname'];
-                                                            } ?></span> </label>
-      <input type="text" name="lastname" id="lastname" placeholder="john" required />
+                                                            } ?></span><input class="input" type="text" name="lastname" id="lastname" placeholder="john" required /></label>
+
     </div>
     <div class="order__payment">
       <h2 class="title">betaalMethode</h2>
@@ -52,19 +53,19 @@
                                               echo $errors['card_number'];
                                             } ?></span>
           </label>
-          <input type="text" name="kaartnummer" id="kaartnummer" placeholder="1234 1234 1234 1234 1" />
+          <input class="input" type="text" name="kaartnummer" id="kaartnummer" placeholder="1234 1234 1234 1234 1" />
           <label for="vervaldatum">
             vervaldatum<span class="error"><?php if (!empty($errors['expiration_date'])) {
                                               echo $errors['expiration_date'];
                                             } ?></span>
           </label>
-          <input type="text" name="vervaldatum" id="vervaldatum" placeholder="12/25" />
+          <input class="input" type="text" name="vervaldatum" id="vervaldatum" placeholder="12/25" />
           <label for="naam__kaart">
             Naam op de kaart<span class="error"><?php if (!empty($errors['name_on_card'])) {
                                                   echo $errors['name_on_card'];
-                                                } ?></span>
+                                                } ?></span><input class="input" type="text" name="naam__kaart" id="naam__kaart" placeholder="johnDoe" />
           </label>
-          <input type="text" name="naam__kaart" id="naam__kaart" placeholder="johnDoe" />
+
         </div>
       </div>
       <div class="radioBtn__grid">
