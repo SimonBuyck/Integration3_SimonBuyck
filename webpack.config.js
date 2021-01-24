@@ -9,7 +9,7 @@ module.exports = (env, { mode }) => {
   console.log(mode);
   return {
     output: {
-      filename: "script.js",
+      filename: 'script.js',
     },
     devServer: {
       overlay: true,
@@ -22,9 +22,9 @@ module.exports = (env, { mode }) => {
         {
           test: /\.(woff(2)?|jpe?g|png|svg|webp)$/,
           use: {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "assets/img/[name].[ext]",
+              name: 'assets/img/[name].[ext]',
               esModule: false,
             },
           },
@@ -32,27 +32,24 @@ module.exports = (env, { mode }) => {
         {
           test: /\.(woff(2)?|woff)$/,
           use: {
-            loader: "file-loader",
-            options: {
-              esModule: false,
-            },
+            loader: 'file-loader'
           },
         },
         {
           test: /\.css$/,
           use: [
-            mode === "production"
+            mode === 'production'
               ? MiniCssExtractPlugin.loader
-              : "style-loader",
-            "css-loader",
-            "resolve-url-loader",
+              : 'style-loader',
+            'css-loader',
+            'resolve-url-loader',
             {
-              loader: "postcss-loader",
+              loader: 'postcss-loader',
               options: {
                 sourceMap: true,
                 postcssOptions: {
                   plugins: [
-                    require("postcss-import"),
+                    require('postcss-import'),
                     postcssPresetEnv({ stage: 0 }),
                   ],
                 },
@@ -64,7 +61,7 @@ module.exports = (env, { mode }) => {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: "style.css",
+        filename: 'style.css',
       }),
       new OptimizeCSSAssetsPlugin(),
       new webpack.HotModuleReplacementPlugin(),

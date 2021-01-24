@@ -15,10 +15,13 @@
 
   <title>Maker Faire Gent - <?php echo $title; ?></title>
   <?php echo $css; ?>
-</head>Ò
+</head>
 
 <body>
-  <header class="header header__absolute">
+  <header class=<?php if ($title == 'tutorial') {
+                        echo 'header__absolute';
+                      }
+                      echo 'header' ?>>
     <div class="header__wrapper">
       <a class="header__title__link" href="#">
         <img src="./assets/img/logo.png" alt="Maker fair Gent logo " width="40" height="40" />

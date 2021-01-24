@@ -6,7 +6,7 @@
       <div class="overzicht__item__text">
         <h3 class="subtitle">slede</h3>
         <p>Een coole slede uit hout</p>
-        <a class="overzicht__link body__special" href="#">
+        <a class="overzicht__link body__special" href="index.php?page=shop&id=1">
           <span>Tutorial volgen</span>
           <img src="./assets/img/arrow.png" alt="arrow" width="12" height="12" />
         </a>
@@ -16,7 +16,7 @@
       <div class="overzicht__item__text">
         <h3 class="subtitle">harnas</h3>
         <p>een leren harnas voor je huisdier(en)</p>
-        <a class="overzicht__link body__special" href="#">
+        <a class="overzicht__link body__special" href="index.php?page=shop&id=2">
           <span>Tutorial volgen</span>
           <img src="./assets/img/arrow.png" alt="arrow" width="12" height="12" />
         </a>
@@ -26,7 +26,7 @@
       <div class="overzicht__item__text">
         <h3 class="subtitle">slede & harnas</h3>
         <p>een leren harnas voor je huisdier(en)</p>
-        <a class="overzicht__link body__special" href="#">
+        <a class="overzicht__link body__special" href="index.php?page=shop&id=3">
           <span>Tutorial volgen</span>
           <img src="./assets/img/arrow.png" alt="arrow" width="12" height="12" />
         </a>

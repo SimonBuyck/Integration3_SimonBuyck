@@ -5,18 +5,9 @@ require_once(__DIR__ . '/DAO.php');
 class ShopDAO extends DAO
 {
 
-  public function selectQuotesByEpisode($episode)
+  public function selectById($id)
   {
-    $sql = "SELECT * FROM `quotes` WHERE `episode_id` = :episode ORDER BY `id` DESC";
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':episode', $episode);
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
-  }
-
-  public function selectQuoteById($id)
-  {
-    $sql = "SELECT * FROM `quotes` WHERE `id` = :id";
+    $sql = "SELECT * FROM `shop_items` WHERE `id` = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();
