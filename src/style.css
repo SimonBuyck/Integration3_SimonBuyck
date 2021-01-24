@@ -7,7 +7,7 @@
 @import './css/shop.css';
 @import './css/navigation.css';
 @import './css/tutorial.css';
-@import './assets/fonts.css';
+@import './css/fonts.css';
 
 html {
   box-sizing: border-box;

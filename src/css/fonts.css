@@ -1,0 +1,23 @@
+
+@font-face {
+  font-family: Barriecito;
+  src:
+    url(../assets/fonts/Barriecito/Barriecito-Regular.woff2) format('woff2'),
+    url(../assets/fonts/Barriecito/Barriecito-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: Avenir;
+  src:
+    url(../assets/fonts/Avenir/AvenirLTStd-Roman.woff2) format('woff2'),
+    url(../assets/fonts/Avenir/AvenirLTStd-Roman.woff) format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Avenir;
+  src:
+    url(../assets/fonts/Avenir/AvenirLTStd-Black.woff2) format('woff2'),
+    url(../assets/fonts/Avenir/AvenirLTStd-Black.woff) format('woff');
+  font-weight: bold;
+}

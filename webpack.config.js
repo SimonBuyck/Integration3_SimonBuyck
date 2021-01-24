@@ -1,4 +1,5 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+/* eslint-disable object-curly-spacing */
+/* eslint-disable babel/object-curly-spacing */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPresetEnv = require('postcss-preset-env');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -13,36 +14,27 @@ module.exports = (env, { mode }) => {
     devServer: {
       overlay: true,
       hot: true,
+      port: 9000,
       disableHostCheck: true,
     },
     module: {
       rules: [
         {
-          test: /\.js$/,
-          exclude: /node_modules/,
+          test: /\.(woff(2)?|jpe?g|png|svg|webp)$/,
           use: {
-            loader: "babel-loader",
+            loader: "file-loader",
+            options: {
+              name: "assets/img/[name].[ext]",
+              esModule: false,
+            },
           },
         },
         {
-          test: /\.html$/,
-          use: [
-            {
-              loader: "html-srcsets-loader",
-              options: {
-                attrs: [":src", ":srcset"],
-              },
-            },
-          ],
-        },
-        {
-          test: /\.(jpe?g|png|svg|webp)$/,
+          test: /\.(woff(2)?|woff)$/,
           use: {
-            loader: "url-loader",
+            loader: "file-loader",
             options: {
-              limit: 1000,
-              context: "./src",
-              name: "[path][name].[ext]",
+              esModule: false,
             },
           },
         },
@@ -58,36 +50,19 @@ module.exports = (env, { mode }) => {
               loader: "postcss-loader",
               options: {
                 sourceMap: true,
-                plugins: [
-                  require("postcss-import"),
-                  postcssPresetEnv({ stage: 0 }),
-                ],
+                postcssOptions: {
+                  plugins: [
+                    require("postcss-import"),
+                    postcssPresetEnv({ stage: 0 }),
+                  ],
+                },
               },
             },
           ],
         },
-        {
-          type: "javascript/auto",
-          test: /\.json$/,
-          include: /(lottie)/,
-          loader: "lottie-web-webpack-loader",
-          options: {
-            assets: {
-              scale: 0.5, // proportional resizing multiplier
-            },
-          },
-        },
-        {
-          test: /\.(woff|woff2|eot|ttf|otf)$/,
-          use: ["file-loader"],
-        },
       ],
     },
     plugins: [
-      new HtmlWebPackPlugin({
-        template: "./src/index.html",
-        filename: "./index.html",
-      }),
       new MiniCssExtractPlugin({
         filename: "style.css",
       }),
