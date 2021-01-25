@@ -157,6 +157,20 @@ footer {
   background-color: var(--primaryWhite);
 }
 
+.lottie__animation {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.lottie__size__box {
+  opacity: 0;
+}
+
+.lottie__animation__container {
+  position: relative;
+}
+
 /* @media screen and (width >= 500px) {
 
 } */

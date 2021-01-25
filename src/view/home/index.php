@@ -42,10 +42,11 @@
       <article class="timer">
         <h3 class="hide">timer naar maker faier 2021</h3>
         <div class="gear gear__left">
-          <img src="./assets/img/tandwielen_links.png" alt="gear" />
+          <div class="lottie__animation" id="gear_left"></div>
+          <img class="gear__size__box" src="./assets/img/tandwielen_links.png" alt="gear" />
         </div>
-        <div class="gear gear__right">
-          <img src="./assets/img/tandwielen_rechts.png" alt="gear" />
+        <div class="gear gear__right" id="gear_right">
+          <img class="gear__size__box" src="./assets/img/tandwielen_rechts.png" alt="gear" />
         </div>
         <div class="timer__wrapper">
           <div class="countdown">

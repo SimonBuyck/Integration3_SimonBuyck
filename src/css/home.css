@@ -87,9 +87,13 @@
   }
 }
 
+.gear__size__box {
+  opacity: 0;
+}
+
 .gear__left {
   left: 0;
-
+  transform: rotate(180deg);
 }
 
 .gear__right {

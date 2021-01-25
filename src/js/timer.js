@@ -14,9 +14,9 @@
     }
 
     function initializeClock(endtime) {
-      const daysSpan = document.getElementById("days");
-      const hoursSpan = document.getElementById("hours");
-      const minutesSpan = document.getElementById("minutes");
+      const daysSpan = document.getElementById('days');
+      const hoursSpan = document.getElementById('hours');
+      const minutesSpan = document.getElementById('minutes');
 
       console.log(daysSpan);
       console.log(hoursSpan);
@@ -40,25 +40,25 @@
       }
     }
 
-    const deadline = Date.parse("April 30, 2021");
+    const deadline = Date.parse('April 30, 2021');
     initializeClock(deadline);
   };
 
   const init = () => {
-    console.log("init");
+    console.log('init');
     startTimer();
 
-    const scrEl = document.getElementById("scr-el");
+    const scrEl = document.getElementById('scr-el');
     if (scrEl) {
-      scrEl.addEventListener("scroll", () => {
+      scrEl.addEventListener('scroll', () => {
         const scrolled =
           (scrEl.scrollLeft / (scrEl.scrollWidth - scrEl.clientWidth)) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
+        document.getElementById('myBar').style.width = scrolled + '%';
       });
     }
   };
 
   init();
 
-  console.log("timer started");
+  console.log('timer started');
 }

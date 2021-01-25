@@ -18,10 +18,7 @@
 </head>
 
 <body>
-  <header class=<?php if ($title == 'tutorial') {
-                        echo 'header__absolute';
-                      }
-                      echo 'header' ?>>
+  <header class="header<?php echo $title == 'slede' || $title == 'harnas' ? ' header__absolute' : '' ?>">
     <div class="header__wrapper">
       <a class="header__title__link" href="index.php">
         <img src="./assets/img/logo.png" alt="Maker fair Gent logo " width="40" height="40" />
