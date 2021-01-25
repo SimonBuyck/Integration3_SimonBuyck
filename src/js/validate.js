@@ -67,7 +67,6 @@
   };
 
   const init = () => {
-    console.log('start validating');
     const $form = document.querySelector(`form`);
     $form.noValidate = true;
     $form.addEventListener(`submit`, handleSubmitForm);

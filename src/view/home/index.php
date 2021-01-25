@@ -49,13 +49,13 @@
         </div>
         <div class="timer__wrapper">
           <div class="countdown">
-            <p class="countdown__time days"></p>
+            <p class="countdown__time" id="days"></p>
             <p class="countdown__paragraph dagen">dagen</p>
             <p class="countdown__time">:</p>
-            <p class="countdown__time hours"></p>
+            <p class="countdown__time" id="hours"></p>
             <p class="countdown__paragraph uren">uren</p>
             <p class="countdown__time">:</p>
-            <p class="countdown__time minutes"></p>
+            <p class="countdown__time" id="minutes"></p>
             <p class="countdown__paragraph minuten">minuten</p>
           </div>
           <p class="timer__paragraph">
