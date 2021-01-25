@@ -11,7 +11,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Alles over de kampioenen">
+  <meta name="description" content="Maker faire Gent maar dan bij jou thuis!">
 
   <title>Maker Faire Gent - <?php echo $title; ?></title>
   <?php echo $css; ?>
