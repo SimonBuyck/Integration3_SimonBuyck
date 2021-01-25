@@ -2,12 +2,20 @@
 
 require_once(__DIR__ . '/DAO.php');
 
-class ShopDAO extends DAO
-{
+class ShopDAO extends DAO {
 
   public function selectById($id)
   {
     $sql = "SELECT * FROM `shop_items` WHERE `id` = :id";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
+
+  public function selectOrderById($id){
+    $sql = "SELECT * FROM `orders` WHERE `id` = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id', $id);
     $stmt->execute();
@@ -42,7 +50,9 @@ class ShopDAO extends DAO
         $stmt->bindValue(':name_on_card', '-');
       }
       $stmt->bindValue(':order_id', $data['order_id']);
-      $stmt->execute();
+      if($stmt->execute()){
+        return $this->selectOrderById($this->pdo->lastInsertId());
+      }
     }
     return false;
   }

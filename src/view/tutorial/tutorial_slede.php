@@ -1,30 +1,31 @@
-<main class="tutorial">
-  <div class="webcam" id="videoContainer">
-    <canvas width="640" height="480" id="myCanvas"></canvas>
-  </div>
-  <div id="scr-el" class="landscape tutorial__content">
-    <ul class="tutorial__items">
-      <li class="plank1">plank</li>
-      <li class="plank2">plank</li>
-      <li class="plank3">plank</li>
-      <li class="deuvel">deuvel</li>
-      <li class="deuvelpin">deuvelpin</li>
-      <li class="meter">meter</li>
-      <li class="screw">screw</li>
-      <li class="boormachine">boormachine</li>
-      <li class="borstel">borstel</li>
-      <li class="zaag">zaag</li>
-      <li class="verf">verf</li>
-      <li class="houtlijm">houtlijm</li>
-      <li class="vernis">vernis</li>
-    </ul>
-    <div class="tutorial__maten">
-      <div class="tutorial__maten__intro">
-        <img class="tutorial__maten__img--ondersteuning" src="./assets/img/zitondersteuning.png" alt="zitondersteuning van de slede" sizes="383px" srcset="
+    <main class="tutorial">
+      <div class="webcam" id="videoContainer">
+        <canvas width="640" height="480" id="myCanvas"></canvas>
+      </div>
+      <div id="scr-el" class="landscape tutorial__content">
+        <ul class="tutorial__items">
+          <li class="plank1">plank</li>
+          <li class="plank2">plank</li>
+          <li class="plank3">plank</li>
+          <li class="deuvel">deuvel</li>
+          <li class="deuvelpin">deuvelpin</li>
+          <li class="meter">meter</li>
+          <li class="screw">screw</li>
+          <li class="boormachine">boormachine</li>
+          <li class="borstel">borstel</li>
+          <li class="zaag">zaag</li>
+          <li class="verf">verf</li>
+          <li class="houtlijm">houtlijm</li>
+          <li class="vernis">vernis</li>
+        </ul>
+        <div class="tutorial__maten">
+          <div class="tutorial__maten__intro">
+            <img class="tutorial__maten__img--ondersteuning" src="./assets/img/zitondersteuning.png" alt="zitondersteuning van de slede" sizes="383px" srcset="
                 ./assets/img/zitondersteuning@0.5x.png  219w,
                 ./assets/img/zitondersteuning@2x.png    764w,
                 ./assets/img/zitondersteuning@3x.png   1145w
               " />
+
         <p>
           We gaan van start met het afmeten van de verschillende stukken
           hout
@@ -36,6 +37,7 @@
               ./assets/img/stokken@3x.png   1316w
             " />
       <img class="tutorial__maten__img--poten" src="./assets/img/poten.png" alt="poten van de slede" sizes="595px" srcset="
+
               ./assets/img/poten@0.5x.png  297w,
               ./assets/img/poten@2x.png   1189w,
               ./assets/img/poten@3x.png   1783w
@@ -43,6 +45,7 @@
     </div>
     <div class="tutorial__zagen">
       <img class="tutorial__zagen__zaag" src="./assets/img/tutorial_zaag.png" alt="een zaag" sizes="452px" srcset="
+
               ./assets/img/tutorial_zaag@0.5x.png  226w,
               ./assets/img/tutorial_zaag@2x.png    904w,
               ./assets/img/tutorial_zaag@3x.png   1356w
@@ -69,6 +72,7 @@
               ./assets/img/deuvel.png 143w,
               ./assets/img/deuvel.png 215w
             " />
+
       <p class="tutorial__deuvel__text">
         boor gaten die de helft van de deuvel diep zijn en tel er nog +-2
         milimeter bij. Dit zodat de twee stukken straks goed op elkaar
@@ -77,22 +81,24 @@
     </div>
     <div class="tutorial__boren">
       <img class="tutorial__boren__drill" src="./assets/img/boormachine.png" alt="boormachine" sizes="404px" srcset="
+
               ./assets/img/boormachine@0.5x.png  202w,
               ./assets/img/boormachine@2x.png    806w,
               ./assets/img/boormachine@3x.png   1210w
             " />
-      <div class="tutorial__boren__wood">
-        <div class="tutorial__boren__deuvel__hole"></div>
-        <div class="tutorial__boren__deuvel__hole"></div>
-        <div class="tutorial__boren__deuvel__hole"></div>
-      </div>
-    </div>
-    <div class="tutorial__deuvelpin">
-      <img class="tutorial__deuvel__img" src="./assets/img/deuvelpin.png" alt="deuvel" sizes="72px" srcset="
+          <div class="tutorial__boren__wood">
+            <div class="tutorial__boren__deuvel__hole"></div>
+            <div class="tutorial__boren__deuvel__hole"></div>
+            <div class="tutorial__boren__deuvel__hole"></div>
+          </div>
+        </div>
+        <div class="tutorial__deuvelpin">
+          <img class="tutorial__deuvel__img" src="./assets/img/deuvelpin.png" alt="deuvel" sizes="72px" srcset="
               ./assets/img/deuvelpin@0.5x.png  36w,
               ./assets/img/deuvelpin@2x.png   143w,
               ./assets/img/deuvelpin@3x.png   215w
             " />
+
       <p class="tutorial__deuvel__text">
         Plaats de deuvelpinnen in de juist geboorde gatten. Duw nu het
         zitvlakondersteuningsstuk hard zodat er putjes in het hout komen.
@@ -137,37 +143,40 @@
     </div>
     <div class="tutorial__paint">
       <img class="tutorial__paint__img" src="./assets/img/slede_1.png" alt="slede" sizes="544px" srcset="
+
               ./assets/img/slede_1@0.5x.png  272w,
               ./assets/img/slede_1@2x.png   1088w,
               ./assets/img/slede_1@3x.png   1632w
             " />
-      <p class="tutorial__paint__text">
-        Vijs de stokken vast op het zitvlak. De drie korte in het midden en
-        de twee lange langst de buitenkant.
-      </p>
-      <p class="button">
-        <a class="button__link" href="#">Ik begrijp het</a>
-      </p>
-      <div class="tutorial__paint__paint">
-        <img src="./assets/img/verfpot_rood.png" alt="rode verfpot" sizes="627px" srcset="
+          <p class="tutorial__paint__text">
+            Vijs de stokken vast op het zitvlak. De drie korte in het midden en
+            de twee lange langst de buitenkant.
+          </p>
+          <p class="button">
+            <a class="button__link" href="#">Ik begrijp het</a>
+          </p>
+          <div class="tutorial__paint__paint">
+            <img src="./assets/img/verfpot_rood.png" alt="rode verfpot" sizes="627px" srcset="
                 ./assets/img/verfpot_rood@0.5x.png  313w,
                 ./assets/img/verfpot_rood@2x.png   1253w,
                 ./assets/img/verfpot_rood@3x.png   1879w
               " />
         <img src="./assets/img/verfpot_groen.png" alt="groene verfpot" sizes="627px" srcset="
+
                 ./assets/img/verfpot_groen@0.5x.png  313w,
                 ./assets/img/verfpot_groen@2x.png   1253w,
                 ./assets/img/verfpot_groen@3x.png   1879w
               " />
         <img src="./assets/img/verfpot_blauw.png" alt="rode verfpot" sizes="627px" srcset="
+
                 ./assets/img/verfpot_blauw@0.5x.png  313w,
                 ./assets/img/verfpot_blauw@2x.png   1253w,
                 ./assets/img/verfpot_blauw@3x.png   1879w
               " />
+          </div>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
       </div>
-    </div>
-    <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
-    </div>
-  </div>
-</main>
+    </main>

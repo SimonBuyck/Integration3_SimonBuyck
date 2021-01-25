@@ -11,19 +11,16 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Alles over de kampioenen">
+  <meta name="description" content="Maker faire Gent maar dan bij jou thuis!">
 
   <title>Maker Faire Gent - <?php echo $title; ?></title>
   <?php echo $css; ?>
 </head>
 
 <body>
-  <header class=<?php if ($title == 'tutorial') {
-                        echo 'header__absolute';
-                      }
-                      echo 'header' ?>>
+  <header class="header<?php echo $title == 'slede' || $title == 'harnas' ? ' header__absolute' : '' ?>">
     <div class="header__wrapper">
-      <a class="header__title__link" href="#">
+      <a class="header__title__link" href="index.php">
         <img src="./assets/img/logo.png" alt="Maker fair Gent logo " width="40" height="40" />
         <h1 class="header__title">
           APRIL, 1 & 2 MEI 2021 • CHINASTRAAT GENT

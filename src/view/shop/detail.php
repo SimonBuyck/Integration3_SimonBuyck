@@ -10,7 +10,7 @@
       <p class="title price">€ <?php echo $item['price']; ?>,99</p>
     </div>
     <p class="button">
-      <a class="button__link" href="index.php?page=confirm&id=<?php echo $item['id']; ?>">Pakket kopen</a>
+      <a class="button__link" href="index.php?page=confirm&tutorial=<?php echo $item['tutorial']; ?>&id=<?php echo $item['id']; ?>">Pakket kopen</a>
     </p>
     <ul class="detail__contents body">
       <li class="detail__content__title">Inhoud</li>

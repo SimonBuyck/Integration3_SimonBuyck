@@ -7,6 +7,7 @@ class DAO {
 	protected $pdo;
 
   // Constructor
+
 	function __construct() {
 
 		if(empty(self::$sharedPDO)) {
