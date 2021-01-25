@@ -1,6 +1,5 @@
 {
   const startTimer = () => {
-    console.log("timer started");
     function getTimeRemaining(endtime) {
       const t = endtime - new Date().getTime();
       const minutes = Math.floor((t / 1000 / 60) % 60);
@@ -19,13 +18,17 @@
       const hoursSpan = document.getElementById("hours");
       const minutesSpan = document.getElementById("minutes");
 
+      console.log(daysSpan);
+      console.log(hoursSpan);
+      console.log(minutesSpan);
+
       if (daysSpan || hoursSpan || minutesSpan) {
         const updateClock = () => {
           const t = getTimeRemaining(endtime);
 
           daysSpan.innerHTML = t.days;
-          hoursSpan.innerHTML = (0 + t.hours).slice(-2);
-          minutesSpan.innerHTML = (0 + t.minutes).slice(-2);
+          hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+          minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
 
           if (t.total <= 0) {
             clearInterval(timeinterval);
@@ -56,4 +59,6 @@
   };
 
   init();
+
+  console.log("timer started");
 }
