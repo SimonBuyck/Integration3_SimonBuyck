@@ -1,20 +1,6 @@
 {
-  const init = () => {
-    console.log('init');
-    startTimer();
-
-    const scrEl = document.getElementById('scr-el');
-    if (scrEl) {
-      scrEl.addEventListener('scroll', () => {
-        const scrolled =
-          (scrEl.scrollLeft / (scrEl.scrollWidth - scrEl.clientWidth)) * 100;
-        document.getElementById('myBar').style.width = scrolled + '%';
-      });
-    }
-  };
-
   const startTimer = () => {
-    console.log('timer started');
+    console.log("timer started");
     function getTimeRemaining(endtime) {
       const t = endtime - new Date().getTime();
       const minutes = Math.floor((t / 1000 / 60) % 60);
@@ -29,9 +15,9 @@
     }
 
     function initializeClock(endtime) {
-      const daysSpan = document.getElementById('days');
-      const hoursSpan = document.getElementById('hours');
-      const minutesSpan = document.getElementById('minutes');
+      const daysSpan = document.getElementById("days");
+      const hoursSpan = document.getElementById("hours");
+      const minutesSpan = document.getElementById("minutes");
 
       if (daysSpan || hoursSpan || minutesSpan) {
         const updateClock = () => {
@@ -51,8 +37,22 @@
       }
     }
 
-    const deadline = Date.parse('April 30, 2021');
+    const deadline = Date.parse("April 30, 2021");
     initializeClock(deadline);
+  };
+
+  const init = () => {
+    console.log("init");
+    startTimer();
+
+    const scrEl = document.getElementById("scr-el");
+    if (scrEl) {
+      scrEl.addEventListener("scroll", () => {
+        const scrolled =
+          (scrEl.scrollLeft / (scrEl.scrollWidth - scrEl.clientWidth)) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      });
+    }
   };
 
   init();

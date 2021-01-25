@@ -23,7 +23,7 @@
                       }
                       echo 'header' ?>>
     <div class="header__wrapper">
-      <a class="header__title__link" href="#">
+      <a class="header__title__link" href="index.php">
         <img src="./assets/img/logo.png" alt="Maker fair Gent logo " width="40" height="40" />
         <h1 class="header__title">
           APRIL, 1 & 2 MEI 2021 • CHINASTRAAT GENT
