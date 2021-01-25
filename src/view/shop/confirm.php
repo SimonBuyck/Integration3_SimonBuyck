@@ -1,5 +1,5 @@
 <main class="order">
-  <form class="order__grid" action="index.php?page=confirm&id=<?php echo $_GET['id'] ?>" method="post">
+  <form class="order__grid" action="index.php?page=confirm&tutorial=<?php echo $_GET['tutorial'] ?>&id=<?php echo $_GET['id'] ?>" method="post">
     <input type="text" name="order_id" id="order_id" value=<?php echo $_GET['id'] ?> hidden />
     <input type="hidden" name="action" value="insirtOrder">
     <div class="order__adres">
@@ -14,7 +14,7 @@
       <label for="house_number">
         Huisnummer<span class="error"><?php if (!empty($errors['house_number'])) {
                                         echo $errors['house_number'];
-                                      } ?></span><input class="input" type="text" name="house_number" id="house_number" placeholder="123" required /></label>
+                                      } ?></span><input class="input" type="number" name="house_number" id="house_number" placeholder="123" required /></label>
       <label for="extra_adres">
         Extra adresregel (optioneel)<span class="error"></span><input type="text" name="extra_adres" id="extra_adres" placeholder="4A" /></label>
       <div class="gender">
@@ -79,7 +79,7 @@
         <div class="order__item order__item__price">
           <p><?php echo $item['name'] ?>- pakket</p>
           <p class="order__price">€ <?php echo $item['price']; ?>,99</p>
-          <a href="index.php?page=shop" class="secondairy__button">
+          <a href="index.php?page=shop&tutorial=<?php echo $_GET['tutorial']; ?>" class="secondairy__button">
             <p class="button__link">verwijderen</p>
           </a>
         </div>

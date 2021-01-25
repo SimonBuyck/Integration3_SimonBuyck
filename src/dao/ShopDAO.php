@@ -2,8 +2,7 @@
 
 require_once(__DIR__ . '/DAO.php');
 
-class ShopDAO extends DAO
-{
+class ShopDAO extends DAO {
 
   public function selectById($id)
   {
