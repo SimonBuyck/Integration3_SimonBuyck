@@ -14,21 +14,20 @@
       </div>
       <div id="scr-el" class="landscape tutorial__content">
         <ul class="tutorial__items">
-          <li class="plank1">plank</li>
-          <li class="plank2">plank</li>
-          <li class="plank3">plank</li>
-          <li class="deuvel">deuvel</li>
-          <li class="deuvelpin">deuvelpin</li>
-          <li class="meter">meter</li>
-          <li class="screw">screw</li>
-          <li class="boormachine">boormachine</li>
-          <li class="borstel">borstel</li>
-          <li class="zaag">zaag</li>
-          <li class="verf">verf</li>
-          <li class="houtlijm">houtlijm</li>
-          <li class="vernis">vernis</li>
+          <li class="tutorial__item plank1"><div></div></li>
+          <li class="tutorial__item plank2">plank</li>
+          <li class="tutorial__item plank3">plank</li>
+          <li class="tutorial__item deuvel">deuvel</li>
+          <li class="tutorial__item deuvelpin">deuvelpin</li>
+          <li class="tutorial__item meter">meter</li>
+          <li class="tutorial__item screw">screw</li>
+          <li class="tutorial__item boormachine">boormachine</li>
+          <li class="tutorial__item borstel">borstel</li>
+          <li class="tutorial__item zaag">zaag</li>
+          <li class="tutorial__item verf">verf</li>
+          <li class="tutorial__item houtlijm">houtlijm</li>
+          <li class="tutorial__item vernis">vernis</li>
         </ul>
-        <canvas id="items_canvas" class="items_canvas hide" width="1440" height="1024"></canvas>
         <div class="tutorial__maten">
           <div class="tutorial__maten__intro">
             <img class="tutorial__maten__img--ondersteuning" src="./assets/img/zitondersteuning.png" alt="zitondersteuning van de slede" sizes="383px" srcset="
