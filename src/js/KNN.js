@@ -39,13 +39,18 @@ async function setup() {
 
 setup();
 
+let started = false;
+
 function draw() {
   requestAnimationFrame(draw);
 
   ctx.drawImage(video, 0, 0, width, height);
 
   if (modelLoaded) {
-    classify();
+    if (!started) {
+      classify();
+      started = true;
+    }
   }
 }
 
@@ -89,11 +94,11 @@ function gotResults(err, result) {
       if (result.label) {
         if (result.label === '0') {
           if (scrEl.scrollLeft < scrEl.scrollWidth - scrEl.offsetWidth) {
-            scrEl.scrollLeft = scrEl.scrollLeft + 1;
+            scrEl.scrollLeft = scrEl.scrollLeft + 10;
           }
         } else if (result.label === '2') {
           if (scrEl.scrollLeft < scrEl.scrollWidth - scrEl.offsetWidth) {
-            scrEl.scrollLeft = scrEl.scrollLeft - 1;
+            scrEl.scrollLeft = scrEl.scrollLeft - 10;
           }
         }
       }
