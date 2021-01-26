@@ -37,6 +37,7 @@
   "dependencies": {
     "@lottiefiles/lottie-player": "^0.5.1",
     "gsap": "^3.6.0",
-    "lottie-web": "^5.7.6"
+    "lottie-web": "^5.7.6",
+    "ml5": "^0.6.0"
   }
 }

@@ -44,3 +44,21 @@ lottie.loadAnimation({
   autoplay: true, // Optional
   name: 'gesture rechts', // Name for future reference. Optional.
 });
+
+lottie.loadAnimation({
+  container: document.getElementById('day_night_cycle1'), // Required
+  path: './assets/lottie/day-night_cycle.json', // Required
+  renderer: 'svg/canvas/html', // Required
+  loop: true, // Optional
+  autoplay: true, // Optional
+  name: 'day night cycle', // Name for future reference. Optional.
+});
+
+lottie.loadAnimation({
+  container: document.getElementById("day_night_cycle2"), // Required
+  path: "./assets/lottie/day-night_cycle.json", // Required
+  renderer: "svg/canvas/html", // Required
+  loop: true, // Optional
+  autoplay: true, // Optional
+  name: "day night cycle", // Name for future reference. Optional.
+});

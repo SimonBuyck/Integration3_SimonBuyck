@@ -1,6 +1,41 @@
-.portait {
-  display: none;
-  background-color: black;
+.items_canvas {
+  width: 100vw;
+  height: 100%;
+}
+
+.portrait {
+  background-color: var(--primaryBlack);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+
+  & div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primaryWhite);
+
+    & p {
+      margin-top: var(--marginM);
+      max-width: 30rem;
+      text-align: center;
+    }
+  }
+
+  & div:first-child {
+    margin-top: auto;
+  }
+
+  & div:last-child {
+    margin-top: 6.4rem;
+    margin-bottom: auto;
+  }
 }
 
 .tutorial ~ footer {
@@ -99,7 +134,6 @@
 .tutorial__maten__img--stokken {
   align-self: center;
   justify-self: center;
-  margin-left: 5rem;
   margin-bottom: 1.5rem;
   margin-top: auto;
 }
@@ -126,7 +160,7 @@
 .tutorial__zagen__text {
   position: absolute;
   top: 25.5rem;
-  left: 28.5rem;
+  right: 0;
   text-align: center;
 
   & p:not(:first-child) {
@@ -166,14 +200,6 @@
 .tutorial__wait {
   margin-left: 10rem;
   width: 100vw;
-  display: flex;
-
-  /* verwijderen */
-
-  & img {
-    margin-top: auto;
-    width: 100%;
-  }
 }
 
 .tutorial__deuvel, .tutorial__deuvelpin, .tutorial__stokken, .tutorial__vernis {
@@ -229,6 +255,13 @@
 .tutorial__assembleren {
   margin-left: 10rem;
   position: relative;
+  height: 100%;
+  width: 36.5rem;
+}
+
+.tutorial__assembleren__img {
+  width: 100%;
+  height: 100%;
 }
 
 .tutorial__assembleren__text {
@@ -240,8 +273,11 @@
 }
 
 .tutorial__stokken {
-  width: 20rem;
   text-align: center;
+}
+
+.tutorial__stokken__text {
+  width: 30rem;
 }
 
 .tutorial__stokken__img {
@@ -283,17 +319,17 @@
   }
 }
 
+@media (orientation: landscape) {
+
+  .portrait {
+    display: none;
+  }
+}
+
 @media (orientation: portrait) {
 
   .portait {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: flex;
-    flex-flow: column;
-    z-index: 100;
   }
 
   .landscape {
@@ -301,57 +337,281 @@
   }
 }
 
-@media screen and (height >= 400px) {
+@media screen and (height >= 440px) {
 
-  .tutorial__maten__img--ondersteuning {
-    width: 30rem;
-    height: 16.8rem;
-    margin-top: auto;
+  .tutorial__maten__img--poten {
+    margin-left: 15rem;
   }
 
-  .tutorial__maten__img--stokken {
-    width: 30rem;
-    height: 13.6rem;
-    margin-left: 1rem;
-  }
-
-  .tutorial__maten {
-
-    & p {
-      width: 30rem;
-    }
+  .tutorial__assembleren {
+    width: 45rem;
   }
 }
 
-@media screen and (height >= 500px) {
+@media screen and (height >= 465px) {
 
   .tutorial__maten__img--ondersteuning {
     width: 30rem;
-    height: 16.8rem;
-    margin-top: auto;
+  }
+
+  .tutorial__maten__img--poten {
+    width: 41.7rem;
+    margin-left: 15rem;
   }
 
   .tutorial__maten__img--stokken {
-    width: 30rem;
-    height: 13.6rem;
-    margin-left: 1rem;
-  }
-
-  .tutorial__maten {
-
-    & p {
-      width: 30rem;
-    }
+    width: 32.5rem;
+    margin-left: 0;
   }
 }
 
-@media screen and (height >= 768px) {
+@media screen and (height >= 530px) {
+
+  .tutorial__maten__img--poten {
+
+    margin-left: 15rem;
+  }
+
+  .tutorial__maten__img--stokken {
+    margin-left: 8rem;
+  }
+
+  .tutorial__zagen__zaag {
+    top: -15rem;
+    width: 64.5rem;
+  }
+
+  .tutorial__zagen__text {
+    top: 50rem;
+  }
+
+  .tutorial__zagen {
+    width: 80rem;
+  }
+
+  .tutorial__assembleren {
+    width: 55rem;
+  }
+}
+
+@media screen and (height >= 575px) {
+
+  .tutorial__maten__intro {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+
+  .tutorial__maten__img--poten {
+    margin-left: 20rem;
+  }
+
+  .tutorial__maten__img--stokken {
+    margin-left: 8rem;
+  }
+}
+
+@media screen and (height >= 600px) {
+
+  .tutorial__maten__img--poten {
+    width: 47.6rem;
+  }
+
+  .tutorial__maten__img--stokken {
+    width: 38.2rem;
+  }
+}
+
+@media screen and (height >= 650px) {
+
+  .tutorial__maten__img--stokken {
+    margin-left: 15rem;
+  }
+
+  .tutorial__assembleren {
+    width: 65rem;
+  }
+}
+
+@media screen and (height >= 685px) {
+
+  .tutorial__maten__img--stokken {
+    width: 42.9rem;
+  }
+
+  .tutorial__maten__img--poten {
+    width: 47.6rem;
+  }
+
+  .tutorial__maten__img--ondersteuning {
+    width: 35.2rem;
+  }
+
+  .tutorial__zagen__zaag {
+    top: -35rem;
+    width: 99rem;
+  }
+
+  .tutorial__zagen__text {
+    width: max-content;
+  }
+
+  .tutorial__zagen {
+    width: 100rem;
+  }
+}
+
+@media screen and (height >= 750px) {
+
+  .tutorial__maten__img--ondersteuning {
+    width: 40rem;
+  }
+
+  .tutorial__maten__img--stokken {
+    width: 48rem;
+  }
+
+  .tutorial__maten__img--poten {
+    width: 58rem;
+  }
+
+  .wood--bottom {
+    bottom: -30rem;
+  }
+
+  .wood--top {
+    top: -30rem;
+  }
+
+  .tutorial__boren__wood {
+    width: 60vw;
+    height: 15rem;
+  }
+
+  .tutorial__assembleren {
+    width: 75rem;
+  }
+
+  .tutorial__deuvel__img, .tutorial__deuvelpin__img {
+    width: 35rem;
+    height: 35rem;
+  }
+
+  .tutorial__stokken__img {
+    height: 55rem;
+  }
+
+  .tutorial__stokken {
+    margin-bottom: 5px;
+  }
+
+  .tutorial__paint__img {
+    width: 90rem;
+    margin-bottom: 6.4rem;
+  }
+
+  .tutorial__paint__paint img {
+    width: 20rem;
+  }
+
+  .tutorial__paint__paint {
+    margin-top: 3.2rem;
+  }
+
+  .tutorial__maten, .tutorial__zagen, .tutorial__lijmen, .tutorial__wait, .tutorial__deuvel, .tutorial__boren, .tutorial__deuvelpin, .tutorial__assembleren, .tutorial__stokken, .tutorial__vernis, .tutorial__paint {
+    margin-left: 20rem;
+  }
+}
+
+@media screen and (height >= 800px) {
+
+  .tutorial__maten__img--ondersteuning {
+    width: 46.5rem;
+  }
+
+  .tutorial__maten__img--stokken {
+    margin-left: 15rem;
+    width: 52.7rem;
+  }
+
+  .tutorial__maten__img--poten {
+    width: 62.5rem;
+  }
+
+  .tutorial__zagen__zaag {
+    top: -40rem;
+    width: 129rem;
+  }
+
+  .tutorial__zagen__text {
+    top: 70rem;
+    width: max-content;
+  }
+
+  .tutorial__zagen {
+    width: 146.7rem;
+  }
+
+  .webcam {
+    width: 48rem;
+    height: 27rem;
+  }
+
+}
+
+@media screen and (height >= 875px) {
+
+  .tutorial__maten__img--poten {
+    margin-left: 25rem;
+  }
+
+}
+
+@media screen and (height >= 900px) {
+
+  .tutorial__maten__intro {
+    margin-left: 7.5rem;
+  }
+
+  .tutorial__maten__img--stokken {
+    margin-left: 15rem;
+  }
+
+  .tutorial__maten__img--poten {
+    width: 62.5rem;
+  }
+
+}
+
+@media screen and (height >= 960px) {
+
+  .tutorial__maten__img--poten {
+    margin-left: 32.8rem;
+  }
+
+  .tutorial__assembleren {
+    width: 99.7rem;
+  }
+}
+
+@media screen and (height >= 1000px) {
+
+  .tutorial__maten__img--stokken {
+    margin-left: 38.8rem;
+  }
+
+  .tutorial__maten__img--poten {
+    margin-left: 32.8rem;
+  }
+
+}
+
+/* @media screen and (height >= 1024px) {
 
   .tutorial__maten__img--ondersteuning {
     width: 46.5rem;
     height: 26rem;
-    margin-top: auto;
-    margin-left: 7.4rem;
+    margin-left: 7.5rem;
+    margin-top: 30rem;
   }
 
   .tutorial__maten {
@@ -366,43 +626,27 @@
   .tutorial__maten__img--stokken {
     width: 52.7rem;
     height: 24rem;
-    margin-left: 12rem;
+    margin-left: 38.8rem;
   }
 
   .tutorial__maten__img--poten {
     width: 62.5rem;
     height: 17.5rem;
-    margin-left: 21rem;
-  }
-}
-
-@media screen and (height >= 768px) {
-
-  .tutorial__maten__img--ondersteuning {
-    width: 46.5rem;
-    height: 26rem;
-    margin-top: auto;
-    margin-left: 7.4rem;
+    margin-left: 32.8rem;
   }
 
-  .tutorial__maten {
-
-    & p {
-      margin-top: .4rem;
-      margin-left: 7.4rem;
-      width: 46.5rem;
-    }
+  .tutorial__zagen {
+    width: 145.7rem;
   }
 
-  .tutorial__maten__img--stokken {
-    width: 52.7rem;
-    height: 24rem;
-    margin-left: 12rem;
+  .tutorial__zagen__zaag {
+    width: 129rem;
+    top: -40rem;
   }
 
-  .tutorial__maten__img--poten {
-    width: 62.5rem;
-    height: 17.5rem;
-    margin-left: 21rem;
+  .tutorial__zagen__text {
+    width: 46rem;
+    top: 75.7rem;
+    left: 100rem;
   }
-}
+} */
