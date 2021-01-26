@@ -55,7 +55,7 @@
             " />
         </div>
         <div class="tutorial__zagen">
-          <img class="tutorial__zagen__zaag" src="./assets/img/tutorial_zaag.png" alt="een zaag" sizes="452px" srcset="
+          <img id="saw" class="tutorial__zagen__zaag" src="./assets/img/tutorial_zaag.png" alt="een zaag" sizes="452px" srcset="
 
               ./assets/img/tutorial_zaag@0.5x.png  226w,
               ./assets/img/tutorial_zaag@2x.png    904w,
@@ -90,8 +90,8 @@
             passen.
           </p>
         </div>
-        <div class="tutorial__boren">
-          <img class="tutorial__boren__drill" src="./assets/img/boormachine.png" alt="boormachine" sizes="404px" srcset="
+        <div class="tutorial__boren" id="drill_container">
+          <img id="drill" class="tutorial__boren__drill" src="./assets/img/boormachine.png" alt="boormachine" sizes="404px" srcset="
 
               ./assets/img/boormachine@0.5x.png  202w,
               ./assets/img/boormachine@2x.png    806w,
@@ -164,7 +164,7 @@
             de twee lange langst de buitenkant.
           </p>
           <p class="button">
-            <a class="button__link" href="#">Ik begrijp het</a>
+            <a class="button__link" href="#">Ik ben klaar met de slede</a>
           </p>
           <div class="tutorial__paint__paint">
             <img src="./assets/img/verfpot_rood.png" alt="rode verfpot" sizes="627px" srcset="

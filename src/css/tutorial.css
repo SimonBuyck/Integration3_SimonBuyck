@@ -48,7 +48,7 @@
 
 .header__absolute {
   position: absolute;
-  z-index: 10;
+  z-index: 1500;
   left: 0;
   top: 0;
 }
@@ -317,6 +317,10 @@
   & img {
     width: 6.5rem;
   }
+}
+
+.background--white {
+  background-color: var(--primaryWhite);
 }
 
 @media (orientation: landscape) {
