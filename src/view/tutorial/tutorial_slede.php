@@ -151,13 +151,7 @@
             de twee lange langst de buitenkant.
           </p>
           <p class="button">
-            <a class="button__link" href=<?php if ($_GET['tutorial'] == 1) {
-                                    echo 'index.php?page=shop';
-                                  } else if ($_GET['tutorial'] == 2) {
-                                    echo 'index.php?page=shop';
-                                  } else {
-                                    echo 'index.php?page=tutorial_harnas&id=3';
-                                  } ?>>Ik ben klaar met de slede</a>
+            <a class="button__link" href="index.php?page=overzicht">Ik ben klaar met de slede</a>
           </p>
           <div class="tutorial__paint__paint">
             <img src="./assets/img/verfpot_rood.png" alt="rode verfpot" sizes="627px" srcset="

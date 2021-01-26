@@ -4,9 +4,6 @@ import Draggable from 'gsap/Draggable';
 
 gsap.registerPlugin(Draggable);
 
-const title = document.querySelector('.title');
-gsap.to(title, {color: '#8c0', duration: 10});
-
 const tl = new TimelineMax({repeat: - 1, yoyo: true, repeatDelay: 0.5});
 
 tl.to('#saw', 1, {y: - 100});
