@@ -3,6 +3,23 @@
   height: 100%;
 }
 
+.tutorial__maten {
+  background-image: url(../assets/img/plooimeter@3x.png);
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: flex;
+  grid-template-columns: max-content;
+  position: relative;
+  margin-top: 5rem;
+  margin-left: 15rem;
+
+  & p {
+    width: 23rem;
+    grid-column-start: 1;
+  }
+}
+
 .portrait {
   background-color: var(--primaryBlack);
   height: 100%;
@@ -101,21 +118,13 @@
   position: relative;
 }
 
-.tutorial__maten {
-  background-image: url(../assets/img/plooimeter@3x.png);
-  background-size: contain;
-  background-position: left center;
-  background-repeat: no-repeat;
-  display: flex;
-  grid-template-columns: max-content;
-  position: relative;
-  margin-top: 5rem;
-  margin-left: 15rem;
-
-  & p {
-    width: 23rem;
-    grid-column-start: 1;
-  }
+.tutorial__items__scroll {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 .tutorial__maten__intro {

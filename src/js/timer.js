@@ -18,10 +18,6 @@
       const hoursSpan = document.getElementById('hours');
       const minutesSpan = document.getElementById('minutes');
 
-      console.log(daysSpan);
-      console.log(hoursSpan);
-      console.log(minutesSpan);
-
       if (daysSpan || hoursSpan || minutesSpan) {
         const updateClock = () => {
           const t = getTimeRemaining(endtime);
@@ -45,7 +41,6 @@
   };
 
   const init = () => {
-    console.log('init');
     startTimer();
 
     const scrEl = document.getElementById('scr-el');
@@ -59,6 +54,4 @@
   };
 
   init();
-
-  console.log('timer started');
 }

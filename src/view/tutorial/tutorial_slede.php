@@ -13,21 +13,9 @@
         <canvas width="640" height="480" id="myWebcam"></canvas>
       </div>
       <div id="scr-el" class="landscape tutorial__content">
-        <ul class="tutorial__items">
-          <li class="tutorial__item plank1"><div></div></li>
-          <li class="tutorial__item plank2">plank</li>
-          <li class="tutorial__item plank3">plank</li>
-          <li class="tutorial__item deuvel">deuvel</li>
-          <li class="tutorial__item deuvelpin">deuvelpin</li>
-          <li class="tutorial__item meter">meter</li>
-          <li class="tutorial__item screw">screw</li>
-          <li class="tutorial__item boormachine">boormachine</li>
-          <li class="tutorial__item borstel">borstel</li>
-          <li class="tutorial__item zaag">zaag</li>
-          <li class="tutorial__item verf">verf</li>
-          <li class="tutorial__item houtlijm">houtlijm</li>
-          <li class="tutorial__item vernis">vernis</li>
-        </ul>
+        <div class="tutorial__items" id="tutorial__items">
+          <div class="tutorial__items__scroll"></div>
+        </div>
         <div class="tutorial__maten">
           <div class="tutorial__maten__intro">
             <img class="tutorial__maten__img--ondersteuning" src="./assets/img/zitondersteuning.png" alt="zitondersteuning van de slede" sizes="383px" srcset="
@@ -163,7 +151,13 @@
             de twee lange langst de buitenkant.
           </p>
           <p class="button">
-            <a class="button__link" href="#">Ik ben klaar met de slede</a>
+            <a class="button__link" href=<?php if ($_GET['tutorial'] == 1) {
+                                    echo 'index.php?page=shop';
+                                  } else if ($_GET['tutorial'] == 2) {
+                                    echo 'index.php?page=shop';
+                                  } else {
+                                    echo 'index.php?page=tutorial_harnas&id=3';
+                                  } ?>>Ik ben klaar met de slede</a>
           </p>
           <div class="tutorial__paint__paint">
             <img src="./assets/img/verfpot_rood.png" alt="rode verfpot" sizes="627px" srcset="
